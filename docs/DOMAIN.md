@@ -1,0 +1,89 @@
+# Domain
+
+This document defines the project-specific language a teammate or agent needs
+before interpreting requirements, product behavior, or implementation choices.
+Use these terms consistently. See [SYSTEM.md](SYSTEM.md) for how the system works,
+[DECISIONS.md](DECISIONS.md) for why trade-offs were made,
+[ROADMAP.md](ROADMAP.md) for unfinished commitments, and
+[CHANGELOG.md](CHANGELOG.md) for shipped changes.
+
+## Domain map
+
+- **What this product serves:** Reusable, public-safe Roogo agent workflows; the first published workflow is video explanation.
+- **Primary actors:** The commissioning user, production agent, reviewer, and future skill maintainer.
+- **Core workflow:** Brief and evidence → script and beats → approved assets/narration → production → review → delivery.
+- **External standards:** Provider access and usage terms, per-asset licensing, and the agreed media delivery specifications; MIT applies only to this repository's original code and documentation.
+
+## Core vocabulary
+
+### Production contract
+
+**Meaning:** The agreed audience, claim boundaries, format, voice, budget authority,
+and delivery scope for a film.
+
+**Origin:** Production-brief practice, narrowed by Voxplainer's operating workflow.
+
+**Why it matters for building:** A storyboard request does not authorize paid
+batch generation or publication. Defaults cannot override explicit user choices.
+
+**Evidence:** [Establish the production contract](../skills/voxplainer/SKILL.md#establish-the-production-contract).
+
+### Visual grammar / production mode
+
+**Meaning:** How scenes are constructed: Editorial Motion, Cinematic Parallax, or
+Layered 2.5D. Not the aspect ratio or narrative treatment.
+
+**Origin:** Motion-design vocabulary organized into the three local production choices.
+
+**Why it matters for building:** Each choice has distinct asset requirements and
+review criteria; more layers are not automatically better.
+
+**Evidence:** [Mode definitions](../skills/voxplainer/references/visual-modes.md).
+
+### Visual beat
+
+**Meaning:** A narrated idea with a specific visible action or change that helps
+the viewer understand it.
+
+**Origin:** Film/editing beat terminology, applied here to explanation and evidence.
+
+**Why it matters for building:** A long narration over an unchanged slide fails
+even when the layout looks polished. Decorative motion does not replace explanation.
+
+**Evidence:** [Build from story to frames](../skills/voxplainer/SKILL.md#build-from-story-to-frames).
+
+### Interface proof and capture freshness
+
+**Meaning:** A real captured product state supports only the claim it visibly
+establishes. Freshness identifies the build, fixture, time, viewport, and expected media.
+
+**Origin:** Product-demo QA practice, made explicit through Roogo video iterations.
+
+**Why it matters for building:** Old placeholders, synthetic composites, or a visible
+button cannot prove current photos, completed payments, or an untested downstream action.
+
+**Evidence:** [Interface evidence](../skills/voxplainer/references/horizontal-product-explainer.md#interface-evidence).
+
+### Acceptance checkpoint / gate
+
+**Meaning:** A review of a specific artifact, such as claims, a voice sample, rough
+cut, or final master, against the production contract.
+
+**Origin:** Production review practice; numbered gates were used in the hotel campaign.
+
+**Why it matters for building:** Approval applies to the reviewed scope. Gate numbers
+are project-specific, not universal permission for all later spending or release.
+
+**Evidence:** [Review and deliverables](../skills/voxplainer/README.md#what-you-review-and-receive).
+
+### Source asset and derived working copy
+
+**Meaning:** The preserved original asset and its separately identified edited version,
+with source, license, and modification records.
+
+**Origin:** Media asset-management and provenance practice.
+
+**Why it matters for building:** Being downloadable from SVG Repo or another library
+does not prove redistribution rights; revisions must not destroy the original.
+
+**Evidence:** [Asset provenance](../skills/voxplainer/references/asset-provenance.md).
