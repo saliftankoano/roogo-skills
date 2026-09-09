@@ -29,6 +29,9 @@ not permission to invent a result. A concept request ends before rendering.
 
 ## What does validation establish?
 
+Audience/message review is separate from the checks below: technical or visual
+success alone does not establish that the film serves its intended viewer.
+
 | Check | Establishes | Does not establish |
 | --- | --- | --- |
 | Package validator | Metadata, package-local links, reachable references, Python syntax | Quality of a generated film or correctness of factual claims |
@@ -52,3 +55,23 @@ The five logbook documents record reasons, mechanisms, shipped changes, language
 and unfinished commitments separately. AGENTS.md makes maintenance part of meaningful
 work. A documentation PR is unfinished until merged; it does not enter the shipped
 changelog merely because its files exist on a branch.
+
+## Audience and message planning
+
+How does a feature inventory become a useful campaign? Voxplainer's
+[planning reference](../skills/voxplainer/references/audience-and-messaging.md)
+organizes films by primary viewer, situation, communication purpose, evidence,
+takeaway, and ending before scripting. The audience/message brief lives in the
+production contract; campaigns add a proposed film map rather than a competing
+contract. Format and visual grammar are selected independently.
+
+Material audience ambiguity is resolved before script lock or paid narration.
+Existing explicit approval can satisfy that checkpoint. Proposed splits, merges,
+or deferrals do not change a commissioned lineup until accepted. Narrow repairs
+preserve approved messages and surface unrelated strategy findings separately.
+
+Message review checks opening relevance, language, scene necessity, role handoffs,
+and the ending. It records what was actually inspected; an agent review does not
+claim measured viewer comprehension or retention. The [decision](DECISIONS.md)
+explains why this layer precedes production. Installation and campaign adoption
+remain separately tracked in [ROADMAP.md](ROADMAP.md).

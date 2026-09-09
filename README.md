@@ -24,7 +24,8 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 ## Skills
 
 - [Voxplainer — human guide](skills/voxplainer/README.md) — research-led editorial explainers in vertical, long-form, and
-  horizontal product formats, with narration, Remotion production, asset provenance,
+  horizontal product formats, with audience/message planning, campaign organization,
+  narration, Remotion production, asset provenance,
   and release QA guidance.
 
 Voxplainer is currently the only skill published here. A skill is a set of

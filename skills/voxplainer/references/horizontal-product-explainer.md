@@ -5,6 +5,11 @@ the visual language of a conventional screen-recording walkthrough.
 
 ## Story contract
 
+Apply the [audience/message brief](audience-and-messaging.md) before choosing which
+product mechanics to show. Distinguish promotion, evaluation, onboarding, and
+internal training. Cross-role handoffs should answer the primary viewer's question;
+they are not a reason to teach every actor's interface in the same film.
+
 Start with the user problem, coordination failure, or decision the feature resolves.
 Explain the mechanism causally, then show the product interface as evidence that the
 mechanism exists. End with the practical outcome and its boundary. Do not narrate a
