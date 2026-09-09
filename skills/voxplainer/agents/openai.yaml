@@ -1,0 +1,4 @@
+interface:
+  display_name: "Voxplainer"
+  short_description: "Create polished editorial explainer videos"
+  default_prompt: "Use $voxplainer to turn this topic into a polished explainer video."
