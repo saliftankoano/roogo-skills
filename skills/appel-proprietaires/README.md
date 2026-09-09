@@ -30,7 +30,8 @@ up the existing copy before replacing it.
 ## Requirements
 
 - A media generation and text-to-speech toolchain the agent can call, already
-  authenticated.
+  authenticated. Narration runs on ElevenLabs by default, or on Cartesia when
+  you ask for it; the package documents both.
 - `ffmpeg` and `ffprobe`.
 - Python with `Pillow` for on-screen text and cards, and `python-docx` for the
   caption document.
@@ -56,8 +57,8 @@ every place name with me before anything is rendered.
 
 1. A script, approved by you before anything is generated.
 2. A music selection from a rights-cleared library, approved with the script.
-3. Narration in the Roogo narrator voice, with the phone number spoken as
-   number pairs and verified by re-transcription.
+3. Narration in the Roogo narrator voice, on your chosen provider, with the
+   phone number spoken as number pairs and verified by re-transcription.
 4. A 1080x1920 carousel video, roughly 35 to 40 seconds, with burned-in
    captions, brand cards, a measured audio mix, and the corner watermark.
 5. A French caption document covering the video title, the short-form caption,
@@ -77,7 +78,9 @@ in the real font, and the watermark is absent over full-logo cards.
 
 - This package is instructions and helpers, not a rendering service. It
   provisions no credentials, fonts, logos, music, or footage.
-- The voice ID it names is configuration, not permission to use that voice.
+- The voice IDs it names are configuration, not permission to use those voices.
+- A reusable closing clip belongs to the voice that produced it. Changing
+  provider mid-campaign means regenerating it, not mixing two voices in one ad.
 - Generated housing imagery must match the stated budget and must never reuse
   furnished listing photography for a modest unfurnished ask.
 - No guarantee of rental may be promised in the copy.
@@ -87,7 +90,8 @@ in the real font, and the watermark is absent over full-logo cards.
 - [SKILL.md](SKILL.md) is the agent-facing contract.
 - [Demand brief and script](references/brief-and-script.md)
 - [Brand system](references/brand-system.md)
-- [Narration](references/narration.md)
+- [Narration](references/narration.md), and the provider references for
+  [ElevenLabs](references/elevenlabs.md) and [Cartesia](references/cartesia.md)
 - [Carousel video](references/carousel-video.md)
 - [Captions, tracking, and naming](references/captions-and-publishing.md)
 - [Static poster, on request](references/static-poster.md)

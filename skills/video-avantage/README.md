@@ -29,7 +29,8 @@ the existing copy before replacing it.
 
 - A media generation, text-to-speech, dialogue, and transcription toolchain the
   agent can call, already authenticated, with balance headroom for character
-  clips.
+  clips. Voices run on ElevenLabs by default, or on Cartesia when you ask for
+  it; the package documents directing both.
 - `ffmpeg` and `ffprobe`.
 - Python with `Pillow`.
 - Your own brand assets: the brand fonts, the transparent logo, and a
@@ -52,8 +53,8 @@ the expected spend before you start generating.
 ## What you get
 
 1. A script in the cold-open structure, approved before any generation.
-2. Narration in the Roogo narrator voice, with character lines in their own
-   voices where the story needs them.
+2. Narration in the Roogo narrator voice, on your chosen provider, with
+   character lines in their own voices where the story needs them.
 3. Generated character clips, comparison cards, and text cards.
 4. Hand-rolled captions positioned per segment, clear of on-screen graphics.
 5. A mixed, loudness-normalised, watermarked vertical video with a real French
@@ -73,6 +74,8 @@ caption track.
 - This package is instructions and helpers, not a rendering service. It
   provisions no credentials, fonts, logos, music, or footage.
 - The voice IDs it names are configuration, not permission to use those voices.
+- A change of voice or provider invalidates any footage whose mouth was animated
+  to the old take; that shot is regenerated as a reaction clip.
 - Character clips cost real money per generation. Revisions that change only
   audio, text, or captions reuse existing footage instead of regenerating it.
 - Numbers on screen come from the approved reference model, never re-derived
@@ -83,7 +86,9 @@ caption track.
 - [SKILL.md](SKILL.md) is the agent-facing contract.
 - [Brief and story structure](references/brief-and-structure.md)
 - [Brand system](references/brand-system.md)
-- [Narration and character voice](references/narration-and-voice.md)
+- [Narration and character voice](references/narration-and-voice.md), and the
+  provider references for [ElevenLabs](references/elevenlabs.md) and
+  [Cartesia](references/cartesia.md)
 - [Comparison and explainer cards](references/comparison-cards.md)
 - [Captions](references/captions.md)
 - [Audio mixing, cost, and revisions](references/audio-and-revisions.md)

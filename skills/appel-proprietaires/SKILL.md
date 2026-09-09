@@ -24,7 +24,12 @@ One ad states one demand. Never combine several demands in a single creative.
 2. Read [references/brand-system.md](references/brand-system.md) before drawing
    any frame, card, or poster.
 3. Whenever generating, splicing, or verifying narration, read
-   [references/narration.md](references/narration.md).
+   [references/narration.md](references/narration.md), then read only the
+   selected provider reference:
+   [references/elevenlabs.md](references/elevenlabs.md) or
+   [references/cartesia.md](references/cartesia.md). ElevenLabs with the
+   narrator voice Alimata is the default; Cartesia is approved when the
+   requester asks for it or the default voice is unavailable.
 4. For the default deliverable, the vertical carousel video, read
    [references/carousel-video.md](references/carousel-video.md).
 5. For the social caption document, publishing tracking, and file naming, read
@@ -72,6 +77,8 @@ Before calling the bundle complete, verify:
 - the demand, zone, budget, and contact details match the approved brief;
 - the rendered video is exactly 1080x1920 and its video and audio durations
   agree when probed;
+- the narration was auditioned by ear and approved before the paid batch, and
+  the manifest records the provider, voice ID, model, and settings used;
 - the narrated phone number was re-transcribed and reads back as grouped number
   pairs, not single digits;
 - captions were width-checked in the real font and never overflow the frame;

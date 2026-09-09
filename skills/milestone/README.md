@@ -69,6 +69,8 @@ than assuming it is clean.
 
 - This package is instructions and helpers, not a rendering service.
 - It does not design the graphic; it animates one that already exists.
+- It adds music, not narration. A milestone that needs a spoken line is an
+  explainer video and belongs to a different skill.
 - Generated motion costs real money per clip and cannot exceed 15 seconds per
   generation; longer videos are chained from the previous clip's last frame.
 - A shared music file is only ever modified in place on an explicit

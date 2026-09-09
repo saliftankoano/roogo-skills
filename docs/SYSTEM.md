@@ -39,6 +39,14 @@ celebration graphic that needs to move is [Milestone](../skills/milestone/README
 Every package states its own exclusions, and each one stops for approval of the
 script, the numbers, or the cost path before spending.
 
+The two narrated formats select a narration provider the way Voxplainer does: a
+provider-independent workflow covering approval by ear, voice roles, spoken
+numbers, and timing, plus one reference per provider that is read only when that
+provider is selected. ElevenLabs with the narrator voice Alimata is their
+default and Cartesia is the approved alternative, with Sandrine in the narrator
+role. Milestone selects no provider, because a milestone post is scored rather
+than narrated.
+
 They share standing Roogo video conventions rather than a shared module: the corner
 watermark excluded over full-logo spans, captions kept clear of on-screen graphics,
 real French titles as filenames, no em dashes or emoji in ad copy, measured rather

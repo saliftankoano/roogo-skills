@@ -52,6 +52,10 @@ deliberately every time. Never assume.
   of image-to-video on a graphic with text.
 - **State the actual spend to the requester** in the final summary whenever the
   premium path was used. It is real money, not a rounding error.
+- **A milestone post is scored, not narrated.** There is no voice-over in this
+  format and no narration provider to select. If the requester wants a spoken
+  line over a milestone, that is an explainer video and belongs to the feature
+  explainer format, which carries the voice contract.
 - French real-title filenames, for example `Roogo - <hook>.mp4`. No em dashes,
   no emoji.
 - When revising an existing milestone video, keep the previous version

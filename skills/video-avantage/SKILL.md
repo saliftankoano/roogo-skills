@@ -28,7 +28,12 @@ generating anything expensive.
 2. Read [references/brand-system.md](references/brand-system.md) before drawing
    any card or text frame.
 3. Whenever generating, revising, or timing narration and character dialogue,
-   read [references/narration-and-voice.md](references/narration-and-voice.md).
+   read [references/narration-and-voice.md](references/narration-and-voice.md),
+   then read only the selected provider reference:
+   [references/elevenlabs.md](references/elevenlabs.md) or
+   [references/cartesia.md](references/cartesia.md). ElevenLabs with the
+   narrator voice Alimata is the default; Cartesia is approved when the
+   requester asks for it or a needed voice is unavailable.
 4. When the benefit needs a before-and-after or us-versus-them comparison, read
    [references/comparison-cards.md](references/comparison-cards.md).
 5. Before building captions, read
@@ -52,7 +57,10 @@ state them briefly.
   is already on screen, never pinned to the bottom edge, never colliding with
   on-screen cards or labels.
 - **Never reuse dialogue-lip-synced footage under a swapped audio line.**
-  Regenerate that shot as a non-verbal reaction clip instead.
+  Regenerate that shot as a non-verbal reaction clip instead. Changing voice or
+  provider counts as changing the line.
+- **One voice per role, declared before generating**, switched only at scene
+  boundaries and loudness-matched across the handoff.
 - No em dashes and no emoji in on-screen or spoken copy. Final files carry real
   French titles, for example `Roogo - <hook>.mp4`, and contact details stay
   visible.
@@ -66,10 +74,12 @@ Before calling the video complete, verify:
 
 - the cold open states the payoff within the first few seconds;
 - no segment is silent, and no caption collides with an on-screen graphic;
-- the narrator was generated on the plain text-to-speech endpoint, with no
-  emotion tags;
+- the narrator was directed as its provider reference requires, and the manifest
+  records the provider, every voice ID, the model, and the settings used;
 - the brand name was confirmed by ear on a short test clip, not guessed;
-- no shot with baked mouth movement plays under a different line;
+- no shot with baked mouth movement plays under a different line, voice, or
+  provider;
+- no delivery markup was spoken aloud, confirmed by transcribing a sample;
 - the audio mix used a longest-duration mix and a final loudness pass on the
   combined output, and the mixed duration matches the video;
 - the caption track's total frame count equals the video's, computed from

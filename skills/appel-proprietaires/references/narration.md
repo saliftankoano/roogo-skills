@@ -1,16 +1,29 @@
 # Narration
 
-## Voice
+Provider-independent workflow. Follow it whatever provider is selected, then
+read **only** the selected provider reference:
+[elevenlabs.md](elevenlabs.md) or [cartesia.md](cartesia.md).
 
-Use the Roogo narrator voice **Alimata**, ElevenLabs voice ID
-`4SFJvuIUvxaPLgk8FoK3`, through the plain text-to-speech endpoint. Do not add
-bracketed emotion tags and do not switch her to the dialogue endpoint; both
-have been rejected by ear as sounding like a different person. Take delivery
-and tone from punctuation instead.
+## Select the provider and voice
+
+ElevenLabs with the Roogo narrator voice **Alimata** is the default for this
+format. Cartesia is an approved alternative when the requester asks for it, when
+the ElevenLabs voice is unavailable, or when the ad needs the slower, more
+deliberate register Cartesia's approved voices provide.
+
+Record the provider, the voice ID, the model, and every delivery setting in the
+build's manifest. Never substitute a voice silently: if the approved one is
+unavailable, stop and ask for an authorized alternative.
 
 Publishing a voice ID is configuration, not permission. Confirm the account has
-access and the right to use the voice before generating. If it is unavailable,
-ask for an authorized alternative rather than silently substituting one.
+access and the right to use the voice before generating.
+
+## Approve the voice before a paid batch
+
+Generate one short representative sample, including the phone-number line, and
+have the requester confirm it **by ear**. A successful generation and a valid
+voice ID prove nothing about how the ad sounds. Only after the sample is
+accepted do you generate the full narration.
 
 ## Spoken numbers
 
@@ -24,11 +37,13 @@ isolation, because a long pass regularly mishears numbers and names.
 
 ## Brand name pronunciation
 
-The French model reads the brand name incorrectly by default. Spell it
-`Rôogo` in narration prompt text only, never on screen. This spelling was
-confirmed by ear on short test clips. Do not invent a new spelling and rebuild
-a full video around it; generate a short test clip and have the requester
-confirm by ear first.
+No provider reads the brand name correctly by default in French. The correction
+is provider-specific and is described in each provider reference. Whichever
+correction is used, it belongs in the narration prompt or in a pronunciation
+dictionary, never on screen.
+
+Confirm the fix by ear on a short test clip before building a full video around
+it. Do not invent a new spelling and rebuild the whole ad on the guess.
 
 ## Reusable closing clip
 
@@ -42,8 +57,14 @@ pronounced correctly.
 Keep the known-good word or segment timestamps for that clip alongside it, so
 caption timing for the closing section does not need to be recomputed.
 
-## Verification
+A reusable clip belongs to the provider and voice that produced it. Switching
+provider mid-campaign means regenerating the closing clip in the new voice and
+re-verifying the number, not splicing two voices into one ad.
 
+## Timing and delivery
+
+- The final processed narration, not the raw provider download, is the timing
+  backbone for slide boundaries and captions.
 - Probe the generated narration and confirm its duration before building any
   video timeline against it.
 - Correct transcription spellings against the approved script before they reach

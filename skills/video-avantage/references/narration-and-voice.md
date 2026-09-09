@@ -1,60 +1,78 @@
 # Narration and character voice
 
-Two roles, two different techniques. Getting this wrong is the single most
-likely reason a finished video is rejected.
+Provider-independent workflow. Follow it whatever provider is selected, then
+read **only** the selected provider reference:
+[elevenlabs.md](elevenlabs.md) or [cartesia.md](cartesia.md).
 
-## Narrator
+Getting voice wrong is the single most likely reason a finished video is
+rejected, and it is the most expensive thing to discover late.
 
-Use the Roogo narrator voice **Alimata**, ElevenLabs voice ID
-`4SFJvuIUvxaPLgk8FoK3`, always through the **plain text-to-speech endpoint**,
-with no bracketed emotion tags.
+## Two roles
 
-An attempt to move her to the dialogue endpoint with stacked emotion tags at
-low stability was rejected outright: it does not sound like the same person,
-even with an identical voice ID. Take delivery and tone from **punctuation**
-instead: exclamation marks, ellipses, question marks.
+This format has two distinct speaking roles, and they are directed differently
+on every provider:
 
-## Named characters
+- **The narrator** carries the argument. One voice, stable across the whole
+  video, delivering the cold open, the rewind cue, the explanation, and the
+  callback.
+- **Named characters** play the story. Each gets its own voice and keeps it for
+  the whole film. A character voice never narrates and the narrator never plays
+  a character.
 
-Characters playing a role use the **dialogue endpoint**, one entry in the
-speaker list, with one or two bracketed emotion tags prefixed to the line, for
-example `[resigned, quietly disappointed]` or `[pleased, confident, warm]`, and
-stability around 0.45. The endpoint reads bracketed tags as delivery direction
-and never speaks them aloud, confirmed by transcribing the result. Three or
-more tags, or stability below about 0.35, reads as overacted and robotic.
+Declare each voice's role before generating, and switch voices only at scene
+boundaries. Loudness-match the handoffs so a role change does not read as a
+level jump.
 
-Give every voice a stable story role and switch only at scene boundaries.
+## Select the provider
 
-## Voice rights
+ElevenLabs with the narrator voice **Alimata** is the default for this format.
+Cartesia is approved when the requester asks for it, when a needed voice is
+unavailable, or when the cast is better served by its approved voices.
 
-Publishing a voice ID is configuration, not permission. Confirm the account has
-access and the right to use each voice before generating. If one is
-unavailable, ask for an authorized alternative rather than substituting one
-silently.
+Record the provider, every voice ID, the model, and all delivery settings in the
+build's manifest. Publishing a voice ID is configuration, not permission:
+confirm access and usage rights before generating, and if a voice is
+unavailable, stop and ask for an authorized alternative rather than
+substituting one silently.
+
+## Confirm by ear before spending
+
+For anything sound-dependent, never guess and then rebuild a slow, costly video
+around the guess. Generate a short, cheap standalone clip of just the disputed
+line or word and have the requester confirm by ear first. A successful
+generation, a valid voice ID, and a clean transcript all pass while the video
+still sounds wrong to the person who has to publish it.
+
+This applies to the voice itself, to any delivery control, and to the brand
+name's pronunciation.
 
 ## Brand name pronunciation
 
-The French model does not read the brand name correctly by default. Spell it
-`Rôogo` in narration and dialogue prompt text **only**, never on screen. This
-was confirmed correct by ear on short test clips. An intermediate attempt,
-`Rougo`, overshot into a full French vowel and was rejected as well.
+No provider reads the brand name correctly in French by default. The correction
+is provider-specific and lives in each provider reference. Whichever is used, it
+belongs in the transcript or in a pronunciation dictionary, never on screen.
 
 When captions are later built from real word timestamps, the transcript renders
-the spoken word inconsistently across takes. Substitute any of those variants
-back to the correct on-screen spelling.
-
-**General rule for anything sound-dependent:** never guess and rebuild a slow,
-costly video around the choice. Generate a short, cheap standalone test clip of
-just the disputed line or word and have the requester confirm by ear first.
+the spoken word inconsistently across takes. Substitute those variants back to
+the correct on-screen spelling before captions are rendered.
 
 ## Lip sync: never reuse dialogue footage under swapped audio
 
 If a clip was generated with native dialogue, its mouth is animated to specific
 words. If the line later changes, even slightly, reusing that footage under a
-new voice track reads as broken lip sync.
+new voice track reads as broken lip sync. Changing provider or voice counts as
+changing the line.
 
 The fix is to regenerate that shot as a non-verbal reaction clip, prompting
 explicitly for listening, reacting, mouth mostly closed, not speaking, no
 dialogue. Narration can then be laid over it freely, because no mouth movement
 is baked in. Apply this proactively to any character shot whose line might
 change across revisions, not only to shots that were silent from the start.
+
+## Transcription is a separate choice
+
+Word timestamps for captions come from transcribing the finished narration
+track. The transcription provider is independent of the text-to-speech
+provider: narration generated on one service can be timed with whichever
+speech-to-text the toolchain offers. Do not switch narration provider merely to
+match the transcriber.
