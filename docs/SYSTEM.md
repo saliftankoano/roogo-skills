@@ -1,0 +1,54 @@
+# System
+
+How the published skills work. See [DECISIONS.md](DECISIONS.md) for reasons,
+[DOMAIN.md](DOMAIN.md) for vocabulary, [CHANGELOG.md](CHANGELOG.md) for shipped
+changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
+
+## What does this repository provide?
+
+It provides reusable agent instructions, not the Roogo app or a hosted rendering
+service. Voxplainer is the only published package. Its [human guide](../skills/voxplainer/README.md)
+covers installation and examples; [SKILL.md](../skills/voxplainer/SKILL.md) is the
+agent contract. References supply conditional detail, metadata supports invocation,
+and the audio helper checks technical output. Copying a package does not provision
+provider credentials, licensed assets, or a Remotion project.
+
+## How does Voxplainer route a request?
+
+The request chooses a delivery format, a visual grammar, and optional storytelling
+treatments independently. The agent reads the matching references before production.
+The [human mode comparison](../skills/voxplainer/README.md#understand-the-modes)
+is the canonical reader overview; [visual modes](../skills/voxplainer/references/visual-modes.md)
+contains the operating criteria. This separation follows the [mode decision](DECISIONS.md).
+
+The contract establishes audience, evidence, scope, budget, voice, and deliverables.
+Research and script feed visual beats. Accepted, processed narration supplies
+timing; implementation produces previews; encoded review checks the delivered
+artifact. Missing evidence or unauthorized paid work stops that part of production,
+not permission to invent a result. A concept request ends before rendering.
+
+## What does validation establish?
+
+| Check | Establishes | Does not establish |
+| --- | --- | --- |
+| Package validator | Metadata, package-local links, reachable references, Python syntax | Quality of a generated film or correctness of factual claims |
+| Executable regression suite | Tested helper behavior, validator regressions, whitespace workflow cases | Every possible runtime environment or media input |
+| Audio quality helper | Measured technical audio checks against configured targets | Natural speech, intelligibility in context, or artistic acceptance |
+| Behavioral fixtures and encoded review | Human/agent evaluation of production behavior and actual output | Automatic proof merely because CI is green |
+
+Run the commands in the [repository README](../README.md#validation). CI validates
+pull requests and pushes to main, including changed-line whitespace. The
+[review record](voxplainer-review.md) and [behavioral fixtures](../tests/fixtures/voxplainer-review.md)
+retain the distinction between automated tests and manual judgment.
+
+## Where do production work and project memory live?
+
+Media projects remain outside this repository. Source assets retain provenance;
+modified working copies and fresh UI captures are identified separately. Secrets
+stay in private configuration, never in public prompts, manifests, or commits.
+See the [public-safety decision](DECISIONS.md).
+
+The five logbook documents record reasons, mechanisms, shipped changes, language,
+and unfinished commitments separately. AGENTS.md makes maintenance part of meaningful
+work. A documentation PR is unfinished until merged; it does not enter the shipped
+changelog merely because its files exist on a branch.

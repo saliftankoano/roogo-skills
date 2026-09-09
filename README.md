@@ -23,9 +23,44 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 
 ## Skills
 
-- `voxplainer` — research-led editorial explainers in vertical, long-form, and
+- [Voxplainer — human guide](skills/voxplainer/README.md) — research-led editorial explainers in vertical, long-form, and
   horizontal product formats, with narration, Remotion production, asset provenance,
   and release QA guidance.
+
+Voxplainer is currently the only skill published here. A skill is a set of
+instructions and supporting resources for an agent, not a standalone video app.
+Start with its human guide for installation, requirements, all modes, example
+prompts, and review checkpoints. [SKILL.md](skills/voxplainer/SKILL.md) is the
+agent-facing operating contract.
+
+## Quick start
+
+Copy the entire `skills/voxplainer` directory into your configured Codex user
+skills directory, commonly `~/.codex/skills/voxplainer`. If it already exists,
+compare and back up the existing copy before replacing it. Open a new task and
+invoke `$voxplainer`, for example:
+
+```text
+$voxplainer Create a French 60-second horizontal product explainer in Editorial
+Motion. Audience: hotel managers. Explain why request approval is different
+from payment. Use the verified evidence and brand assets I provide; do not
+invent product states. Start with the script and storyboard only, without
+paid generation. List missing inputs before production.
+```
+
+See the [full usage guide](skills/voxplainer/README.md) for setup and other modes.
+
+## Project logbook
+
+- [System](docs/SYSTEM.md) — how packages, production guidance, and validation work.
+- [Decisions](docs/DECISIONS.md) — why we chose this structure and workflow.
+- [Changelog](docs/CHANGELOG.md) — verified changes shipped to `main`.
+- [Domain](docs/DOMAIN.md) — the vocabulary used in our skills and reviews.
+- [Roadmap](docs/ROADMAP.md) — accepted work still to finish.
+
+The logbook documents this skills repository, not the Roogo application's release
+history. `logbook` is used to maintain these records; it is not bundled as a skill
+in this repository.
 
 ## Validation
 
