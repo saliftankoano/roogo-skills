@@ -11,6 +11,10 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
   - Done when: agent guidance, human examples, and public behavioral review cases are validated and merged to `main`.
   - Delivery branch: `feat/voxplainer-audience-messaging`. [Decision](DECISIONS.md).
 
+- [ ] **Publish the three Roogo ad-format skills** — migrate the owner call-out, feature explainer, and milestone video workflows as self-contained, public-safe packages with human guides and tested timing helpers.
+  - Done when: the three packages, the catalog entries, the logbook updates, and the helper tests are validated and merged to `main`.
+  - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md).
+
 ## Next
 
 - [ ] **Adopt the reviewed skill locally and revisit the video campaign** — apply the accepted audience/message guidance before further campaign revisions.

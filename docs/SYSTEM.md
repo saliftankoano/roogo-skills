@@ -7,7 +7,8 @@ changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 ## What does this repository provide?
 
 It provides reusable agent instructions, not the Roogo app or a hosted rendering
-service. Voxplainer is the only published package. Its [human guide](../skills/voxplainer/README.md)
+service. Four packages are published: Voxplainer, and the three Roogo ad formats
+Appel a proprietaires, Video avantage, and Milestone. Its [human guide](../skills/voxplainer/README.md)
 covers installation and examples; [SKILL.md](../skills/voxplainer/SKILL.md) is the
 agent contract. References supply conditional detail, metadata supports invocation,
 and the audio helper checks technical output. Copying a package does not provision
@@ -27,6 +28,29 @@ timing; implementation produces previews; encoded review checks the delivered
 artifact. Missing evidence or unauthorized paid work stops that part of production,
 not permission to invent a result. A concept request ends before rendering.
 
+## How do the three ad formats divide the work?
+
+Each package answers one question the requester already knows the answer to, so the
+routing happens before any paid generation. A specific renter or buyer demand that
+should make owners call is [Appel a proprietaires](../skills/appel-proprietaires/README.md).
+A feature, differentiator, or business-model benefit with no listing photography to
+build from is [Video avantage](../skills/video-avantage/README.md). An existing
+celebration graphic that needs to move is [Milestone](../skills/milestone/README.md).
+Every package states its own exclusions, and each one stops for approval of the
+script, the numbers, or the cost path before spending.
+
+They share standing Roogo video conventions rather than a shared module: the corner
+watermark excluded over full-logo spans, captions kept clear of on-screen graphics,
+real French titles as filenames, no em dashes or emoji in ad copy, measured rather
+than guessed audio, and verification by re-listening and by frame checks rather than
+by a successful exit code. Each package carries its own copy of those rules and of
+any helper it needs, because a package must remain portable when it is copied alone
+into a user skills directory. See the [self-containment decision](DECISIONS.md).
+
+Two hard-won pieces of timing maths are helpers rather than prose, because they are
+the ones that were repeatedly got wrong by hand: the real post-transition timeline of
+a crossfade chain, and the frame-exact length of a flattened caption track.
+
 ## What does validation establish?
 
 Audience/message review is separate from the checks below: technical or visual
@@ -36,6 +60,7 @@ success alone does not establish that the film serves its intended viewer.
 | --- | --- | --- |
 | Package validator | Metadata, package-local links, reachable references, Python syntax | Quality of a generated film or correctness of factual claims |
 | Executable regression suite | Tested helper behavior, validator regressions, whitespace workflow cases | Every possible runtime environment or media input |
+| Ad-format timing helpers | Crossfade chain length, card windows, caption frame counts | That a render actually used them, or that the creative works |
 | Audio quality helper | Measured technical audio checks against configured targets | Natural speech, intelligibility in context, or artistic acceptance |
 | Behavioral fixtures and encoded review | Human/agent evaluation of production behavior and actual output | Automatic proof merely because CI is green |
 

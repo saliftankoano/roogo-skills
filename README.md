@@ -27,19 +27,33 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
   horizontal product formats, with audience/message planning, campaign organization,
   narration, Remotion production, asset provenance,
   and release QA guidance.
+- [Appel a proprietaires — human guide](skills/appel-proprietaires/README.md) — owner call-out ad bundles
+  built from one renter or buyer demand: a narrated 9:16 carousel video with burned-in
+  French captions, plus the social copy for publishing.
+- [Video avantage — human guide](skills/video-avantage/README.md) — feature and benefit
+  explainer videos built entirely from generated actors, narration, and comparison
+  cards, for when no listing photography exists.
+- [Milestone — human guide](skills/milestone/README.md) — an existing celebration
+  graphic turned into a scored 9:16 video post, on a cheap zoom path or a paid
+  generated-motion path.
 
-Voxplainer is currently the only skill published here. A skill is a set of
-instructions and supporting resources for an agent, not a standalone video app.
-Start with its human guide for installation, requirements, all modes, example
-prompts, and review checkpoints. [SKILL.md](skills/voxplainer/SKILL.md) is the
-agent-facing operating contract.
+A skill is a set of instructions and supporting resources for an agent, not a
+standalone video app. Start with each human guide for installation, requirements,
+modes, example prompts, and review checkpoints; its `SKILL.md` is the agent-facing
+operating contract.
+
+The three Roogo ad formats are deliberately separate packages with explicit
+boundaries, because choosing the wrong one wastes paid generation. One renter or
+buyer demand calling owners in is `appel-proprietaires`; a feature or benefit with no
+photography to build from is `video-avantage`; an existing celebration graphic to
+animate is `milestone`.
 
 ## Quick start
 
-Copy the entire `skills/voxplainer` directory into your configured Codex user
-skills directory, commonly `~/.codex/skills/voxplainer`. If it already exists,
-compare and back up the existing copy before replacing it. Open a new task and
-invoke `$voxplainer`, for example:
+Copy the package directory you want, for example `skills/voxplainer`, into your
+configured Codex user skills directory, commonly `~/.codex/skills/voxplainer`. If it
+already exists, compare and back up the existing copy before replacing it. Open a new
+task and invoke the skill by name, for example:
 
 ```text
 $voxplainer Create a French 60-second horizontal product explainer in Editorial
@@ -49,7 +63,13 @@ invent product states. Start with the script and storyboard only, without
 paid generation. List missing inputs before production.
 ```
 
-See the [full usage guide](skills/voxplainer/README.md) for setup and other modes.
+```text
+$appel-proprietaires A client is looking for a shop on the Nora road, budget
+50 000 FCFA a month, urgent. Start with the script and the music pick only, no
+generation yet, and confirm the spelling of every place name with me.
+```
+
+See each package's usage guide for setup, modes, and review checkpoints.
 
 ## Project logbook
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Milestone"
+  short_description: "Animate a celebration graphic into video"
+  default_prompt: "Use $milestone to turn this celebration graphic into a 9:16 video post."

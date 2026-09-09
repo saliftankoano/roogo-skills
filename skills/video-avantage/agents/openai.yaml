@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video avantage"
+  short_description: "Feature explainer videos with AI actors"
+  default_prompt: "Use $video-avantage to explain this Roogo feature as a narrated vertical video."
