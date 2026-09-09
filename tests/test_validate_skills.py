@@ -38,6 +38,29 @@ class PackageValidationTests(unittest.TestCase):
         (self.package / "broken.py").write_text("def broken(:\n")
         self.assertTrue(validate(self.root))
 
+    def test_unreachable_reference_cycle_rejected(self):
+        refs = self.package / "references"
+        refs.mkdir()
+        (refs / "a.md").write_text("[B](b.md)\n")
+        (refs / "b.md").write_text("[A](a.md)\n")
+        errors = validate(self.root)
+        self.assertEqual(len(errors), 2)
+        self.assertTrue(all("not reachable from SKILL.md" in error for error in errors))
+
+    def test_reachable_reference_cycle_and_nested_chain_pass(self):
+        refs = self.package / "references"
+        (refs / "nested").mkdir(parents=True)
+        self.entry.write_text(self.entry.read_text() + "[A](references/a.md)\n")
+        (refs / "a.md").write_text("[B](nested/b.md)\n")
+        (refs / "nested/b.md").write_text("[A](../a.md)\n")
+        self.assertEqual(validate(self.root), [])
+
+    def test_unreachable_nested_reference_rejected(self):
+        nested = self.package / "references/nested"
+        nested.mkdir(parents=True)
+        (nested / "orphan.md").write_text("# Orphan\n")
+        self.assertEqual(len(validate(self.root)), 1)
+
     def test_invalid_ui_metadata_rejected(self):
         agents = self.package / "agents"
         agents.mkdir()

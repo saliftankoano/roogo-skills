@@ -10,12 +10,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
       - run: python -m pip install 'PyYAML==6.0.2'
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: python scripts/validate_skills.py
       - run: python -m unittest discover -s tests -v
-      - run: git diff --check
+      - name: Check changed-line whitespace
+        env:
+          DIFF_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          DIFF_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        shell: bash
+        run: |
+          : "${DIFF_BASE:?Missing base commit}" "${DIFF_HEAD:?Missing head commit}"
+          if [[ "$DIFF_BASE" =~ ^0+$ ]]; then
+            DIFF_BASE="$(git hash-object -t tree --stdin </dev/null)"
+          elif [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            DIFF_BASE="$(git merge-base "$DIFF_BASE" "$DIFF_HEAD")"
+          fi
+          git diff --check "$DIFF_BASE" "$DIFF_HEAD"

@@ -44,22 +44,33 @@ def validate(root: Path) -> list[str]:
             except (KeyError, TypeError, yaml.YAMLError) as error:
                 issues.append(f"{metadata}: invalid interface: {error}")
 
-        referenced = set()
+        links = {}
         for doc in package.rglob("*.md"):
+            links[doc.resolve()] = set()
             for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", doc.read_text()):
                 target = target.strip("<>")
                 url = urlsplit(target)
                 if url.scheme or not url.path:
                     continue
                 resolved = (doc.parent / unquote(url.path)).resolve()
-                referenced.add(resolved)
+                links[doc.resolve()].add(resolved)
                 if not resolved.is_relative_to(package.resolve()):
                     issues.append(f"{doc}: local link leaves package: {target}")
                 elif not resolved.exists():
                     issues.append(f"{doc}: missing link: {target}")
-        for ref in (package / "references").glob("*.md"):
-            if ref.resolve() not in referenced:
-                issues.append(f"{ref}: reference is not linked")
+        # Only paths reachable from the entrypoint are discoverable. An orphaned
+        # group of references cannot make itself reachable by forming a cycle.
+        reachable = set()
+        pending = [entry.resolve()]
+        while pending:
+            current = pending.pop()
+            if current in reachable:
+                continue
+            reachable.add(current)
+            pending.extend(links.get(current, ()))
+        for ref in (package / "references").rglob("*.md"):
+            if ref.resolve() not in reachable:
+                issues.append(f"{ref}: reference is not reachable from SKILL.md")
         for script in package.rglob("*.py"):
             try:
                 compile(script.read_text(), str(script), "exec")

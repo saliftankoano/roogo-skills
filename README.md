@@ -29,14 +29,16 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 
 ## Validation
 
-Use Python 3.10 or newer, PyYAML 6, and FFmpeg (including ffprobe):
+Use Python 3.10 or newer, PyYAML 6, FFmpeg (including ffprobe), Git and Bash:
 
 ```sh
 python3 scripts/validate_skills.py
 python3 -m unittest discover -s tests -v
 ```
 
-CI runs the same package and executable checks. When the Codex skill-creator tools
+CI runs the same package and executable checks and checks committed changes for
+whitespace errors. Reference validation follows links from each `SKILL.md`, including
+nested references; a disconnected reference cycle fails. When the Codex skill-creator tools
 are installed, also run their `quick_validate.py` against each changed package.
 Public behavioral review cases live in `tests/fixtures/voxplainer-review.md`; they
 require judgment and are not represented as automatic rendering tests.

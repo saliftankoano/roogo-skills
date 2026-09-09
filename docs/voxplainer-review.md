@@ -40,3 +40,12 @@ strict non-finite-number rejection. The package suite checks a valid minimal ski
 and malformed package inputs. CI does not claim to prove visual quality, voice
 naturalness, license validity, or compliance of a future rendered master; those
 remain evidence-based production reviews.
+
+The follow-up validation review corrected two blind spots: references are now
+traversed from `SKILL.md` rather than counted as linked anywhere, and CI checks
+committed changes rather than a clean working tree. Pull requests use the merge
+base; pushes use the before/after revisions, with the empty tree for a first push.
+Tests execute the workflow's actual whitespace shell step in disposable Git
+repositories and cover disconnected reference cycles and nested reachable chains.
+The full suite now has 19 tests. Checkout and Python setup use pinned Node 24 action
+releases to remove the deprecated runtime warning.
