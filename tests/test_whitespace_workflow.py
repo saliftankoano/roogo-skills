@@ -61,14 +61,20 @@ class WhitespaceWorkflowTests(unittest.TestCase):
         self.assertEqual(self.check("0" * 40, self.base).returncode, 0)
 
     def test_pr_ignores_base_branch_only_changes(self):
-        # A clean PR branch should not be blamed for differences on a diverged base.
-        self.git("checkout", "-qb", "feature", self.base)
+        # The common ancestor has legacy whitespace. Only main fixes it; the PR
+        # adds a clean new file. A direct base-tip/head comparison would wrongly
+        # blame the PR for reintroducing the legacy whitespace.
+        common = self.commit("Legacy trailing space   \n")
+        self.git("checkout", "-qb", "feature", common)
         (self.root / "feature.md").write_text("Feature\n")
         self.git("add", "feature.md")
         self.git("commit", "-qm", "Feature")
         head = self.git("rev-parse", "HEAD")
-        self.git("checkout", "--detach", self.base)
-        base_tip = self.commit("Base-only change\n")
+        self.git("checkout", "--detach", common)
+        base_tip = self.commit("Legacy trailing space\n")
+        direct = subprocess.run(["git", "diff", "--check", base_tip, head],
+                                cwd=self.root, capture_output=True, text=True)
+        self.assertNotEqual(direct.returncode, 0)
         self.assertEqual(self.check(base_tip, head, "pull_request").returncode, 0)
 
     def test_missing_revision_fails(self):
