@@ -4,6 +4,22 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Plan audience and message before video production — 2026-09-09
+
+**Decision:** Add an audience/message planning layer across all Voxplainer modes,
+with campaign organization and a distinct message-readiness review. Deliver this
+through a repository PR before updating installed copies or revising campaign media.
+
+**Why:** Feature-led films can confuse prospective customers, business decision
+makers, and operational users even when their facts, visuals, and encoding pass.
+
+**Ruled out / alternatives:** Another visual mode would not solve audience mixing.
+One film per feature and mandatory sales CTAs would force inappropriate messages.
+Blanket script rewrites during technical fixes would exceed approved scope.
+
+**Status:** Settled direction; PR delivery and later adoption remain tracked in
+[ROADMAP.md](ROADMAP.md). See [SYSTEM.md](SYSTEM.md#audience-and-message-planning).
+
 ### Separate the human guide from the agent contract — 2026-09-09
 
 **Decision:** Put a human-facing README inside each published skill, linked from

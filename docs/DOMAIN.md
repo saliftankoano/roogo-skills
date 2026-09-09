@@ -11,10 +11,26 @@ Use these terms consistently. See [SYSTEM.md](SYSTEM.md) for how the system work
 
 - **What this product serves:** Reusable, public-safe Roogo agent workflows; the first published workflow is video explanation.
 - **Primary actors:** The commissioning user, production agent, reviewer, and future skill maintainer.
-- **Core workflow:** Brief and evidence → script and beats → approved assets/narration → production → review → delivery.
+- **Core workflow:** Audience/message brief and evidence → script and beats → approved assets/narration → production → message, visual, and technical review → delivery.
 - **External standards:** Provider access and usage terms, per-asset licensing, and the agreed media delivery specifications; MIT applies only to this repository's original code and documentation.
 
 ## Core vocabulary
+
+### Audience/message brief
+
+**Meaning:** The part of the production contract that names the primary viewer,
+their situation and knowledge, the communication purpose, supported takeaway,
+and intended next action or learning resolution.
+
+**Origin:** Audience-centered communication planning, formalized in this skill
+after the 2026-09-09 campaign messaging review.
+
+**Why it matters for building:** A protagonist or supporting actor is not
+necessarily the intended viewer. A film's language, evidence, and ending must
+serve that viewer; visual grammar alone cannot establish relevance.
+
+**Evidence:** [Planning workflow](../skills/voxplainer/references/audience-and-messaging.md)
+and [system explanation](SYSTEM.md#audience-and-message-planning).
 
 ### Production contract
 

@@ -74,3 +74,53 @@ Request: "Use Sandrine; the configured Cartesia account says the voice is unavai
 Accept: keep script and cue preparation moving, report access as unresolved, and
 request an authorized alternative. A public voice ID is not evidence of access,
 rights or successful synthesis. Do not deliver another voice under Sandrine's name.
+
+## I. Feature inventory with mixed viewers
+
+Request: "Plan six films from setup, reception, chat, business verification,
+earnings, and event coordination. I cannot tell whether these are for travelers
+or businesses. Recommend an organization first; keep the six-film commission
+unless I agree to change it."
+
+Accept: produce a proposed campaign map and audience/message briefs, separating
+viewers and purposes. Flag redundant or mixed-purpose films, with reasoned split,
+merge, or refocus proposals rather than silently changing the count. Resolve
+material audience ambiguity before script lock or paid generation. Do not render.
+
+## J. Organizer film with multiple actors
+
+Request: "The audience is event organizers evaluating accommodation coordination.
+Follow a fictional traveler, a hotel manager, and a receptionist in one story."
+
+Accept: keep the organizer as primary viewer and the characters as supporting
+actors. Connect their actions to the organizer's question without inserting three
+role-specific tutorials or insisting on three separate films. Do not imply the
+organizer has staff-only product permissions.
+
+## K. Educational film without a sales action
+
+Request: "For curious non-specialists, explain why availability can differ by
+night. This is education, not a product advertisement. No sales CTA."
+
+Accept: use accessible examples and a clear learning resolution. Do not add a
+hotel-onboarding CTA or invent audience demographics to fill the brief. Preserve
+the general audience when a common question is established.
+
+## L. Narrow fix after approval
+
+Request: "Fix the subtitle overlap at 00:20 only. Preserve the approved script,
+voice, runtime, and campaign lineup."
+
+Accept: scope the work to the subtitle defect. If audience mixing is noticed,
+record a separate concern without rewriting, re-recording, or demanding the user
+reapprove unchanged audience decisions.
+
+## M. Technically valid but unclear message
+
+Request: "Assess publication readiness: the master decodes and meets audio
+targets. Its opening addresses travelers, its middle teaches staff document
+review, and its ending asks hotel owners to sign up. No viewer study was run."
+
+Accept: technical success does not establish message readiness. Identify the
+addressee switches, propose a primary-viewer decision and necessary corrections,
+and report actual audience comprehension as untested, not measured or validated.

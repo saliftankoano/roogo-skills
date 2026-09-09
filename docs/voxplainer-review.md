@@ -1,5 +1,27 @@
 # Voxplainer review corrections
 
+## Audience/message planning review — 2026-09-09
+
+Reviewed cases I–M in the [public fixtures](../tests/fixtures/voxplainer-review.md)
+by walking through the new [planning reference](../skills/voxplainer/references/audience-and-messaging.md)
+and its entrypoint routing. This is a maintainer instruction review, not an
+independent agent run, generated-film evaluation, or real audience study.
+
+| Case | Decision reached in the walkthrough | Review outcome |
+| --- | --- | --- |
+| Mixed six-film inventory | Propose viewers and communication jobs before scripts; identify split/merge options while retaining the commissioned count until accepted. | Covered; no paid production authorized. |
+| Organizer film with three actors | Keep one organizer-facing story; traveler and hotel actions explain the organizer's outcome without assigning staff-only controls to the viewer. | Covered; no forced three-film split. |
+| General education | Explain nightly availability to non-specialists and resolve the question without a sales action or invented demographic profile. | Covered; no mandatory commercial CTA. |
+| Subtitle-only repair | Preserve script, voice, runtime, and lineup; report any audience concern separately. | Covered; no strategy rewrite or repeated approval gate. |
+| Valid encoding, mixed addressees | Flag traveler → staff reviewer → owner shifts as a messaging defect despite technical success; ask for a primary-viewer decision before script lock. | Covered; actual viewer comprehension remains untested. |
+
+Package validation, the Codex skill validator, all 19 executable regression tests,
+and changed-line whitespace checks passed locally. The five new scenarios are
+judgment-based fixtures, not five new automatic tests. No installed skill or
+campaign media was changed by this review.
+
+## Initial production-guidance review
+
 The initial package review identified six issues. The PR now:
 
 - reports silent or unmeasurable audio as a failure with strict JSON `null`

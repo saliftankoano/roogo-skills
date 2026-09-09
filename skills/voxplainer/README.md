@@ -1,7 +1,8 @@
 # Voxplainer: a guide for people
 
 Voxplainer helps you turn a researched idea or verified product feature into a
-narrated visual explanation. It covers the script, visual beats, voices, assets,
+narrated visual explanation. It helps organize the audience and message before
+covering the script, visual beats, voices, assets,
 Remotion implementation, revision, and release review. You can request just a
 concept or storyboard; you do not have to commission a finished video.
 
@@ -46,6 +47,36 @@ Production media, credentials, captures, and renders belong outside the skill
 repository. The skill does not supply your official logo, licensed soundtrack,
 private product evidence, provider credits, or a universal access entitlement to
 the named voices.
+
+## Start with the audience and message
+
+You can use Voxplainer before you know which videos to make. Ask it to organize a
+feature inventory into films with distinct viewers and purposes, or review an
+existing cut for confusing audience shifts. This planning layer applies to every
+mode; it is not an additional visual mode or a requirement to render anything.
+
+The agent helps establish **who is watching, why they care, what they already
+know, what this film should explain, and what happens next**. A promotional film
+for a prospective customer, a tutorial for an existing user, and internal staff
+training need different messages even when they show the same feature. General
+editorial education can end with understanding rather than a sales CTA.
+
+Expect a compact audience/message brief and, for a campaign, an inventory of
+viewers, purposes, takeaways, proof, endings, and proposed keep/refocus/split/merge/
+defer decisions. Proposed changes do not automatically change an approved lineup.
+Review material audience choices before locking scripts or buying narration;
+existing approval remains valid for unchanged decisions. See the
+[audience and messaging workflow](references/audience-and-messaging.md) for the
+operating criteria.
+
+```text
+$voxplainer Review this proposed video inventory for audience clarity. Distinguish
+prospective hotel owners, current hotel administrators, reception staff, and
+travelers. Recommend a primary viewer and communication purpose for each film;
+flag overlaps and propose splits or merges with reasons. Preserve the commissioned
+count until I approve changes. Deliver audience/message briefs and a proposed
+campaign map only. Do not rewrite full scripts, generate narration, or render yet.
+```
 
 ## Understand the modes
 
@@ -109,8 +140,10 @@ authorized. Missing material choices should be resolved before cost or productio
 
 ```text
 $voxplainer Make a 90-second French 16:9 editorial product explainer for hotel
-managers, using Editorial Motion and Sandrine as tutorial instructor. Explain
-setup and reception as different responsibilities. Use only my supplied current
+administrators onboarding their hotel, using Editorial Motion and Sandrine as
+tutorial instructor. Help them understand the setup tasks and end with the
+verified next setup action. Keep receptionist task training out of this film.
+Use only my supplied current
 captures as product proof. Use the official logo once on the ending and music
 from my supplied folder. No decorative background shapes. Deliver a script,
 storyboard, and capture-gap list first; no paid generation yet.
@@ -120,7 +153,8 @@ storyboard, and capture-gap list first; no paid generation yet.
 
 ```text
 $voxplainer Plan a 45-second 9:16 Editorial Motion explainer in French about
-per-night room pledges. Use Nathalie for the complex explanation. Build the
+per-night room pledges for hotel managers evaluating an event commitment. Explain
+how the rooms they offer relate to each night. Use Nathalie. Build the
 inventory as the narration explains it, using my verified rules and numbers.
 Show the capacity boundary without promising availability. Start with a script
 and storyboard, then request a voice sample review before full narration.
@@ -130,7 +164,8 @@ and storyboard, then request a voice sample review before full narration.
 
 ```text
 $voxplainer Plan a 75-second 16:9 story-first film in Cinematic Parallax with
-Rapoko. Follow a traveler preparing for arrival, using my licensed location
+Rapoko for first-time travelers considering the service. Follow a traveler
+preparing for arrival, using my licensed location
 photos. Use Editorial Motion only where the booking mechanism needs explaining.
 Keep the approved product limits visible. Propose shots and missing assets before
 any paid generation; do not invent a real customer's testimony.
@@ -140,7 +175,10 @@ any paid generation; do not invent a real customer's testimony.
 
 ```text
 $voxplainer Develop a Layered 2.5D hero film with story-first and animated-film
-treatments. Language: French; voice: Rapoko; target: 105 seconds. Compose both
+treatments for event organizers evaluating accommodation coordination. Travelers
+and hotel staff are supporting actors, not separate tutorial audiences. Resolve
+the organizer's question about how commitments connect to traveler quotes.
+Language: French; voice: Rapoko; target: 105 seconds. Compose both
 16:9 and 9:16 natively. Start with the story and master-scene proposals; wait for
 their review before decomposition or narration batches. Keep exact product text
 and branding separate from the image assets.
@@ -192,7 +230,8 @@ clearly labeled and cannot stand in for the requested narrated delivery.
 
 Agree the checkpoints in the brief. A practical sequence is:
 
-1. Claims and evidence: what can be said, what remains blocked, and capture gaps.
+1. Audience/message brief and claims: who the film serves, its purpose and ending,
+   what can be said, what remains blocked, and capture gaps.
 2. Script, storyboard, selected modes, and representative voice samples.
 3. Narrated rough cuts, comparison frames, pacing, captions, and music.
 4. Encoded masters and release QA, including the complete ending.
@@ -205,6 +244,9 @@ checkpoints, not permission to publish the film or exceed the authorized budget.
 
 Important checks learned from production:
 
+- The opening, scene sequence, language, and ending must serve the same primary
+  viewer. A beautiful, technically valid video can still fail this message check.
+  Agent review is not a measured audience-comprehension or retention study.
 - Visuals must advance with the spoken explanation; motion is meaningful, not
   decorative churn. Backgrounds must respect the approved brand and removals.
 - Use the actual approved logo without redundant typed branding. Inspect supplied

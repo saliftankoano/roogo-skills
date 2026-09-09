@@ -7,13 +7,15 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 
 ## Now
 
-- [ ] **Make the published skill understandable to human repository visitors** — explain setup, all formats and visual modes, examples, limits, and reviews; establish ongoing project memory.
-  - Done when: the human guide, linked catalog, five logbook documents, and agent maintenance trigger are validated and merged to `main`.
-  - Delivery branch: `docs/skill-guides-logbook`. [Decision](DECISIONS.md).
+- [ ] **Publish audience-first video planning** — guide audience selection, message framing, campaign organization, and message-readiness review across Voxplainer modes.
+  - Done when: agent guidance, human examples, and public behavioral review cases are validated and merged to `main`.
+  - Delivery branch: `feat/voxplainer-audience-messaging`. [Decision](DECISIONS.md).
 
 ## Next
 
-No additional outcome is currently scheduled.
+- [ ] **Adopt the reviewed skill locally and revisit the video campaign** — apply the accepted audience/message guidance before further campaign revisions.
+  - Done when: after the PR is reviewed and merged, the installed skill is compared and updated, and campaign audience/message briefs are revisited with the user.
+  - Dependency: audience-first planning PR. No local installation, campaign rewrite, narration purchase, or render is part of that PR.
 
 ## Later
 
@@ -22,4 +24,5 @@ no specific next package or delivery date is committed. Only Voxplainer is curre
 
 ## Recently completed
 
+- [x] **Make the published skill understandable to human repository visitors** — merged 2026-09-09 in [PR #2](https://github.com/saliftankoano/roogo-skills/pull/2); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Publish the improved Voxplainer package and validation** — merged 2026-09-09 in [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1); recorded in [CHANGELOG.md](CHANGELOG.md).

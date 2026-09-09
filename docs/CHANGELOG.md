@@ -7,6 +7,7 @@ the application's release history. See [DECISIONS.md](DECISIONS.md) for why,
 
 ## 2026-09-09
 
+- Published the human-facing Voxplainer guide, mode explanations, and five-document project logbook — verified merged in [PR #2](https://github.com/saliftankoano/roogo-skills/pull/2).
 - Published Voxplainer with three visual grammars, vertical and horizontal routes, narration-provider guidance, asset provenance, and production-feedback safeguards — [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1).
 - Added portable package validation, executable regression tests, CI whitespace checks, and an audio quality helper with strict JSON output — [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1).
 

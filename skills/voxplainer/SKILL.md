@@ -1,11 +1,27 @@
 ---
 name: voxplainer
-description: Create research-led editorial explainer videos as vertical social shorts, horizontal YouTube long-form, or horizontal product explainers, including scripting, visual beat planning, production TTS narration, Remotion production, and render review. Use when a user wants a polished visual explainer rather than a talking-head edit, generic slideshow, or literal screen-recording walkthrough.
+description: Plan, create, or review research-led editorial explainer videos and campaigns, including audience strategy, messaging, scripting, visual beats, narration, and production. Supports vertical shorts, horizontal long-form, and product explainers. Use for an editorial video brief or film, not general marketing strategy unrelated to video.
 ---
 
 # Voxplainer
 
 Create clear, energetic editorial explainers in a distinctive system derived from the user's subject and brand. The name describes the format; do not copy Vox branding, logos, proprietary artwork, or a particular published video shot-for-shot.
+
+## Establish who the film serves
+
+Before drafting or substantially revising a brief, campaign, script, or storyboard,
+read [references/audience-and-messaging.md](references/audience-and-messaging.md).
+Use it also when reviewing audience clarity or publication readiness. This planning
+layer applies to every format and visual grammar; it is not a fourth visual mode.
+
+Define a primary viewer, their situation and prior knowledge, the film's purpose,
+one useful takeaway, and an appropriate next action or learning resolution. For a
+campaign, organize the inventory by viewer needs before assigning features to films.
+Propose splits, merges, or deferrals when useful; do not silently change approved
+deliverables. Supporting characters are not automatically additional audiences.
+
+Keep narrow repairs narrow: a caption, crop, or audio fix preserves the approved
+message. Flag a discovered audience problem separately instead of rewriting the film.
 
 ## Route the format
 
@@ -49,7 +65,7 @@ Preserve any duration, aspect ratio, frame rate, language, brand system, toolcha
 
 Before implementation, resolve from the request and available files:
 
-- audience, desired takeaway, platform, duration, call to action, and tone;
+- the audience/message brief from the planning reference, platform, duration, and tone;
 - factual claims requiring research or citations;
 - brand assets, footage, illustrations, data, maps, and usage constraints;
 - narration provider, voice or voice ID, pronunciation needs, and narration language;
@@ -57,10 +73,14 @@ Before implementation, resolve from the request and available files:
 
 Make reasonable reversible assumptions when inputs are absent. Ask only when a missing choice would materially change the story or incur an external cost the user has not authorized.
 
+Resolve material audience or purpose ambiguity before script lock or paid narration.
+An existing explicit approval can satisfy this checkpoint; do not create repeated
+permission requests. A planning-only request ends with the brief and recommendations.
+
 ## Build from story to frames
 
 1. **Research the claim.** Separate verified facts from hypotheses. For factual or current topics, use authoritative sources, retain a source ledger, and make dates and units explicit. Never invent statistics or citations.
-2. **Write for listening.** Create a spoken script with a clear premise, causal progression, concrete language, and no unsupported rhetorical inflation. Read it aloud or estimate the actual spoken duration before locking it.
+2. **Write for the chosen listener.** Apply the audience/message brief to the opening, vocabulary, examples, scene order, and ending. Give each scene a viewer question and a necessary contribution to the takeaway. Create a spoken script with causal progression, concrete language, and no unsupported rhetorical inflation. Read it aloud or estimate the actual spoken duration before locking it.
 3. **Choose a visual grammar.** Select Editorial Motion, Cinematic Parallax, Layered 2.5D, or a deliberate hybrid according to the story's needs, revision cost, available assets, and desired emotional immediacy. Load the selected mode reference, record why the mode serves the argument, and write its mode-specific acceptance question into the storyboard review notes.
 4. **Create visual beats.** Give every line a visual job. Prefer evidence, diagrams, maps, comparisons, timelines, and purposeful typography over decorative motion.
 5. **Define scenes.** For each scene record its narration, intended duration, start frame, end frame, layers, motion, transition, transition color, assets, and factual source. Mark semantic narration boundaries before generation—especially setup-to-question, framing-to-list, and premise-to-new-scene—and assign explicit provider-native breaks only where comprehension needs them. Also record what changes emotionally, which element causes that change, which face or gesture zones must remain unobstructed, and which visual action hands the story into the next scene. Treat reference screenshots as composition and motion evidence, not assets to copy blindly. When a wipe or color field introduces the next scene, derive its color from the incoming scene unless a deliberate contrast has been justified.
@@ -102,6 +122,7 @@ Render key frames early: opening composition, major transition frames, densest i
 
 Before calling a video complete, verify:
 
+- audience/message review passes separately from technical and visual QA: the opening establishes relevance, the middle serves the same viewer, and the ending resolves their need; record untested audience assumptions without claiming real viewer validation;
 - the hook and final takeaway are immediately understandable;
 - every important claim is accurate and traceable;
 - visuals advance the explanation instead of echoing narration generically;
