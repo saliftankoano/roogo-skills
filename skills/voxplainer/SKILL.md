@@ -33,8 +33,12 @@ Create clear, energetic editorial explainers in a distinctive system derived fro
   (`16dba105-0026-4ff7-bf90-12562786a97c`) as host and **Sandrine**
   (`2435841c-fce7-4fd5-aed1-dc7008eb7d20`) as tutorial instructor. Give every
   voice a stable story role and switch only at scene boundaries. Literal step-by-step screen
-  demonstrations belong to `$product-demo-video`; editorial product explainers may
-  remain in Voxplainer and use interface captures as evidence inside the story.
+  demonstrations may use an installed Product Video / `product-demo-video` skill
+  when available. It is optional and is not bundled here. Without it, follow the
+  capture and proof rules in [references/horizontal-product-explainer.md](references/horizontal-product-explainer.md),
+  map steps to verified UI states, and preserve the requested walkthrough format.
+  Editorial product explainers remain in Voxplainer and use interface captures as
+  evidence inside the story.
 - Whenever revising a rendered video, mixing music or effects, designing the final card, or producing a release master, read [references/finishing-and-revisions.md](references/finishing-and-revisions.md).
 - When the user wants the explainer to feel cinematic, like an animated movie, or asks for richer staging and full-element animation, read [references/animated-film.md](references/animated-film.md).
 - If the user requests both formats, establish one research and story core, then create two independently composed edits. Do not produce the short by mechanically cropping the long-form render.
@@ -104,12 +108,12 @@ Before calling a video complete, verify:
 - the selected visual mode passes its own acceptance question and review passes;
 - every active element enters, acts or reacts, and exits or transforms with a visible narrative purpose;
 - the edit has no unintended frozen tableau, lifeless background, or transition that resets the world without a story reason;
-- the last narrated scene resolves fully before a deliberate end hold or music-only outro, and the final encoded frame contains no partial wipe, clipped logo or departing element;
+- the final scene resolves into the contract's approved ending; any outro fits the agreed duration, and the final encoded frame contains no partial wipe, clipped logo or departing element;
 - narration, scenes, captions, music, and sound effects are synchronized;
 - narrative sound effects use only the shortest recognizable action cue, are faded at their edges, sit below narration, and preserve the supplied source as a separate asset;
 - deliberate spoken pauses preserve sonic continuity through natural vocal tails, room tone, or continuing music rather than sounding like the entire mix was abruptly muted;
 - every question, list, and new-premise boundary has been audited for understandable spacing, and the final word before each break is fully pronounced;
-- each scene uses one approved brand mark unless intentional repetition has been reviewed, and requested removals are absent from settled frames and the encoded tail;
+- when branding is present, each scene uses at most one approved brand mark unless intentional repetition has been reviewed; unbranded scenes are allowed, and requested removals are absent from settled frames and the encoded tail;
 - the narration manifest matches the user-approved provider and voice ID and no placeholder or system voice is presented as final;
 - any user-facing review or release render that promises narration contains the approved voice; silent renders are labeled and used only as internal visual preflights;
 - the voice was audibly reviewed for naturalness, pronunciations and joins; technical success or a valid voice ID alone does not satisfy this check;

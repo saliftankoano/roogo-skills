@@ -9,15 +9,20 @@ supplied by the user when their redistribution rights are not already documented
 Create one asset-manifest entry per downloaded or supplied third-party asset. Record:
 
 - a stable asset ID and local untouched-source path;
-- the exact public item URL, not only a search or collection page;
-- collection, author, uploader, or source library when shown;
-- the license stated on that item page and the retrieval date;
+- for downloaded assets, the exact item URL, collection, author or uploader when
+  shown, the stated license and the retrieval date; keep authenticated URLs private
+  and record a non-secret source reference instead;
+- for user-supplied assets, the original filename, supplier, receipt date, and rights
+  confirmation or license reference; a public URL is optional and never required;
 - commercial-use, attribution, modification, and redistribution requirements;
 - every derived working path and a short description of the modifications;
 - the scenes, compositions, or masters that use the asset.
 
-Do not infer a license from the website, collection, file extension, or neighboring
-items. The individual asset page controls. Exclude an asset when its rights are
+For downloaded assets, do not infer a license from the website, collection, file
+extension, or neighboring items. Record the individual asset's license and consult
+its actual terms. For user-supplied assets, retain the supplied rights confirmation
+or license reference without requiring publication of the private original.
+Exclude an asset when its rights are
 unclear or incompatible with the intended commercial release. Retain required
 notices in the project and delivery package.
 

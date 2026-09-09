@@ -26,7 +26,7 @@ Assign an explicit semantic layer order whenever elements overlap: environment/b
 
 Choose icons by semantic recognition, not geometric convenience. A speaking person should read as speech, a phone as a smartphone, a CV as a document, and reasoning as a question or thought—not as arbitrary split circles or rectangles. Prefer one coherent library such as Phosphor, Lucide, or an existing brand set. Inspect icons without labels at target size; replace any icon that cannot be understood on its own.
 
-Use one approved brand mark per scene. A typed brand name, decorative initial, eyebrow label, and imported wordmark all count as separate marks when they repeat the same identity. Keep the official asset and remove accidental duplicates unless repetition is an intentional, reviewed composition.
+When branding is present, use at most one approved brand mark per scene. Unbranded scenes are allowed. A typed brand name, decorative initial, eyebrow label, and imported wordmark all count as separate marks when they repeat the same identity. Keep the official asset and remove accidental duplicates unless repetition is an intentional, reviewed composition.
 
 ## Compose states, then animate the change
 

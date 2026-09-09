@@ -12,9 +12,12 @@ and catalog name in production metadata. For a calm, slower explanation of compl
 material, Cartesia **Wendata Nathalie Kaoré** is an approved primary or supporting
 narrator. Multi-voice productions may use **Salif**
 (`16dba105-0026-4ff7-bf90-12562786a97c`) as host and **Sandrine** as tutorial
-instructor. Route literal step-by-step screen demonstrations to
-`$product-demo-video`; keep editorial product explainers in Voxplainer when the
-interface serves as evidence inside a broader visual argument.
+instructor. For literal step-by-step screen demonstrations, use an installed
+Product Video / `product-demo-video` skill when available. Otherwise follow
+[horizontal-product-explainer.md](horizontal-product-explainer.md) for safe capture
+and evidence framing while preserving the requested walkthrough format. Keep
+editorial product explainers in Voxplainer when the interface serves as evidence
+inside a broader visual argument.
 
 When using multiple voices, assign one stable role to each voice in the production
 contract and mark all narrator changes before generation. Change voices only at
@@ -28,6 +31,11 @@ choice, not a default requirement.
 Record the provider, selected voice or voice ID, model or pinned snapshot, language, accent, tone, pacing, pronunciation overrides, source loudness target, true-peak ceiling, and approval state in project configuration. Preserve a user-selected provider and voice exactly. If none is supplied, create a short voice-direction note and request a choice only when selecting incorrectly would cause paid regeneration or conflict with brand identity.
 
 Do not imitate a real person's voice without the rights and authorization to use it.
+
+The included voice IDs are Roogo configuration, not credentials or a grant of voice
+rights. Availability can differ by provider account. Confirm authorized access before
+generation; if the selected voice is unavailable, prepare the script and cue plan
+while requesting an authorized replacement. Do not substitute another voice silently.
 
 ## Voice approval gate
 

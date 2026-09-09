@@ -51,9 +51,9 @@ unless the user explicitly asks to review picture without sound.
 A reliable explainer ending has two distinct beats:
 
 1. The final narrated card completes the argument. Its main illustration, message and any CTA settle fully. Disable automatic outgoing wipes or exit transforms on this scene unless the transition into the outro has been intentionally designed and reviewed.
-2. Reserve roughly 3–5 seconds for a music-only brand outro. Use a centered, enlarged logo and the full destination URL. Avoid new narration, dense copy or new ideas. Hold the complete composition through the final video frame while fading the music over roughly the final 2–3 seconds.
+2. When the production contract calls for a brand outro, reserve roughly 3–5 seconds within the agreed duration. Use the approved logo, plus a destination URL only when requested or already approved. Music is optional; when present, fade it over roughly the final 2–3 seconds. Avoid new narration, dense copy or new ideas. Hold the complete composition through the final video frame. Preserve a requested unbranded or alternative ending.
 
-If the user removes a CTA from the final narrated card, do not silently reintroduce it in the outro. A URL may remain as destination context unless the user also removes that.
+If the user removes a CTA or URL, do not reintroduce it in the outro. Keep only the ending elements approved in the production contract.
 
 Removal QA must inspect a settled frame and the encoded tail. Remove the label, background, hit area, entrance/exit animation, and any duplicate brand token—not just the most visible rectangle.
 
@@ -96,11 +96,23 @@ For an outro that continues a narrative location, render a proof against the com
 After the full render:
 
 1. Decode the entire master with FFmpeg or an equivalent decoder.
-2. Probe duration, dimensions, frame rate, codecs, sample rate and channel count.
+2. Probe duration, dimensions, frame rate, codecs, profile, pixel format, color range,
+   color space, transfer, primaries, sample rate and channel count. For standard SDR
+   delivery without an overriding contract, use H.264 High Profile, 30 fps,
+   `yuv420p`, limited range (`tv`), and explicit BT.709 space, transfer and primaries,
+   with AAC stereo at 48 kHz. Verify the encoded values against the contract. Missing
+   or mismatched metadata blocks release. Convert source color correctly before
+   tagging the output; tags alone do not fix a wrongly transformed image. Preserve
+   an explicitly requested HDR, alternate frame rate, codec or audio configuration.
 3. Measure integrated loudness and true peak.
 4. Extract a frame from the encoded file within roughly the final 100 ms and inspect it. A source-code still is insufficient because duration, transition and encoding defects can appear only in the master.
 5. Watch and listen across the last narrated phrase, the cut into the outro and the final fade. Confirm that no old transition briefly exposes fragments or blank color.
 6. Run the selected visual mode's encoded review passes and answer its acceptance question with observed evidence, not intent.
 7. Watch once at target phone or desktop size with player controls visible, verifying caption placement, URL legibility, and safe areas.
+8. Promote accepted files to the exact release folder, then generate and verify a
+   SHA-256 manifest there. Resolve every release-index link against those filenames.
+   Recompute and recheck hashes after any replacement; auditing an earlier render
+   does not approve a different promoted file. Preview the destination player before
+   publication when access is available; otherwise record that check as pending.
 
 Record the revised filename, runtime, mix measurements and review evidence in the delivery report.

@@ -16,10 +16,10 @@ roogo-skills/
 ├── tests/
 │   └── fixtures/    Public-safe behavioral test inputs
 └── .github/
-    └── workflows/   Continuous validation added when the first skill lands
+    └── workflows/   Package validation and executable regression tests
 ```
 
-Each eventual skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A skill may also include `agents/`, `references/`, `scripts/`, and `assets/` when those resources have a concrete purpose.
+Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A skill may also include `agents/`, `references/`, `scripts/`, and `assets/` when those resources have a concrete purpose.
 
 ## Skills
 
@@ -27,4 +27,29 @@ Each eventual skill belongs in `skills/<skill-name>/` and must contain a `SKILL.
   horizontal product formats, with narration, Remotion production, asset provenance,
   and release QA guidance.
 
-Repository-wide licensing and automated CI validation remain planned follow-ups.
+## Validation
+
+Use Python 3.10 or newer, PyYAML 6, and FFmpeg (including ffprobe):
+
+```sh
+python3 scripts/validate_skills.py
+python3 -m unittest discover -s tests -v
+```
+
+CI runs the same package and executable checks. When the Codex skill-creator tools
+are installed, also run their `quick_validate.py` against each changed package.
+Public behavioral review cases live in `tests/fixtures/voxplainer-review.md`; they
+require judgment and are not represented as automatic rendering tests.
+
+## License and voice configuration
+
+The repository's original instructions and code use the [MIT License](LICENSE).
+This license does not grant rights to Roogo trademarks, third-party media, or any
+person's voice. Those assets retain their own rights and provider terms.
+
+The named voice IDs are intentional Roogo configuration, not API keys or account
+credentials. Publishing an ID does not make its voice available to every provider
+account or grant permission to clone or use it. Validate access and usage rights
+before generation; if a voice is unavailable, request an authorized alternative
+instead of silently substituting one. Keep credentials and private access records
+outside this repository.

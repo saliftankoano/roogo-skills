@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import subprocess
 import sys
@@ -34,7 +35,7 @@ def probe(path: Path) -> dict[str, Any]:
         raise RuntimeError("no audio stream")
 
     duration = float(payload.get("format", {}).get("duration", 0))
-    if duration <= 0:
+    if not math.isfinite(duration) or duration <= 0:
         raise RuntimeError("audio duration is not positive")
 
     stream = streams[0]
@@ -82,6 +83,11 @@ def main() -> int:
     parser.add_argument("--max-lufs", type=float, default=-12.0)
     parser.add_argument("--max-true-peak", type=float, default=-1.0)
     args = parser.parse_args()
+    if not all(math.isfinite(value) for value in
+               (args.min_lufs, args.max_lufs, args.max_true_peak)):
+        parser.error("loudness limits must be finite")
+    if args.min_lufs > args.max_lufs:
+        parser.error("min-lufs must not exceed max-lufs")
 
     reports: list[dict[str, Any]] = []
     failed = False
@@ -95,14 +101,21 @@ def main() -> int:
             report.update(probe(path))
             report.update(loudness(path))
 
+            # Silence commonly measures -inf. Reject undefined measurements while
+            # preserving a strict JSON report for downstream release tooling.
+            for field in ("integratedLufs", "truePeakDbtp", "loudnessRangeLu"):
+                if not math.isfinite(report[field]):
+                    report[field] = None
+                    report["issues"].append(f"{field} is not finite; audio may be silent or unmeasurable")
+
             integrated = report["integratedLufs"]
             peak = report["truePeakDbtp"]
-            if integrated < args.min_lufs or integrated > args.max_lufs:
+            if integrated is not None and (integrated < args.min_lufs or integrated > args.max_lufs):
                 report["issues"].append(
                     f"integrated loudness {integrated:.2f} LUFS is outside "
                     f"[{args.min_lufs:.2f}, {args.max_lufs:.2f}]"
                 )
-            if peak > args.max_true_peak:
+            if peak is not None and peak > args.max_true_peak:
                 report["issues"].append(
                     f"true peak {peak:.2f} dBTP exceeds {args.max_true_peak:.2f} dBTP"
                 )
@@ -114,7 +127,7 @@ def main() -> int:
         failed = failed or not report["passed"]
         reports.append(report)
 
-    print(json.dumps({"files": reports}, indent=2))
+    print(json.dumps({"files": reports}, indent=2, allow_nan=False))
     return 1 if failed else 0
 
 

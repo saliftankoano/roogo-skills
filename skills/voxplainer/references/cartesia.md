@@ -4,8 +4,10 @@ Use this reference when Cartesia is the selected narration provider. Also follow
 
 Rapoko remains the primary ElevenLabs narrative voice for editorial and story-led
 work. Cartesia is approved when the explanatory or multi-voice structure benefits
-from one of these roles. Product demos should be routed to `$product-demo-video`,
-where Salif is the default.
+from one of these roles. For product demos, Salif is the default. An installed
+Product Video / `product-demo-video` skill can assist with walkthrough capture; when
+unavailable, use [horizontal-product-explainer.md](horizontal-product-explainer.md)
+for safe capture and evidence framing while preserving the requested format.
 
 ## Approved reusable voices
 
