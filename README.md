@@ -2,7 +2,9 @@
 
 Reusable Codex skills for Roogo product, operations, marketing, and engineering workflows.
 
-This repository currently contains only the repository structure. Existing skills will be reviewed, improved, sanitized for a public repository, and migrated in a later pass.
+Skills are reviewed, improved, sanitized for public use, and migrated here one at a
+time. Each skill keeps its operating instructions, focused references, helper scripts,
+and public-safe metadata together.
 
 ## Repository layout
 
@@ -19,9 +21,10 @@ roogo-skills/
 
 Each eventual skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A skill may also include `agents/`, `references/`, `scripts/`, and `assets/` when those resources have a concrete purpose.
 
-## Current status
+## Skills
 
-- Public GitHub repository shell created.
-- No production skill content has been published.
-- Licensing, the initial skill catalog, and automated validation will be finalized before the first push.
+- `voxplainer` — research-led editorial explainers in vertical, long-form, and
+  horizontal product formats, with narration, Remotion production, asset provenance,
+  and release QA guidance.
 
+Repository-wide licensing and automated CI validation remain planned follow-ups.
