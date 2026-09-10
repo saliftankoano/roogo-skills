@@ -209,7 +209,7 @@ captions. Deliver the revised excerpt plus comparison frames before the full cut
 | Voice | Provider | Intended role |
 | --- | --- | --- |
 | Rapoko | ElevenLabs | Default editorial, story-led, and hero-film narrator. |
-| Salif | Cartesia | Product presenter or host; default for direct product demos. |
+| Salif French / Salif English | Cartesia | Language-matched product presenter or host; Salif remains the direct product-demo default. |
 | Sandrine | Cartesia | Approachable tutorial instruction. |
 | Wendata Nathalie Kaoré | Cartesia | Slower, complex teaching-led explanation. |
 | Jérôme | ElevenLabs | Alternate only when explicitly selected; not an automatic substitute. |

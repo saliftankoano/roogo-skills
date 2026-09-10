@@ -4,6 +4,21 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Name Salif's reusable Cartesia voices by language — 2026-09-09
+
+**Decision:** Preserve Salif's French voice and add his distinct English voice to
+each narrated package's self-contained Cartesia reference, at his explicit request.
+
+**Why:** Future productions need a discoverable language-to-voice mapping without
+guessing from unnamed profiles or assuming one voice suits both languages.
+
+**Ruled out / alternatives:** No global provider switch, replacement of approved
+casts or narrator defaults, implied spending consent, new voice cloning, or stored
+credentials. The reusable IDs do not grant voice rights to repository readers.
+
+**Status:** Settled; implemented on the video-skills branch, not yet verified on
+main. See [voice configuration](SYSTEM.md#how-are-salifs-reusable-voices-selected).
+
 ### Plan audience and message before video production — 2026-09-09
 
 **Decision:** Add an audience/message planning layer across all Voxplainer modes,

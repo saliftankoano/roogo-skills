@@ -59,6 +59,16 @@ Two hard-won pieces of timing maths are helpers rather than prose, because they 
 the ones that were repeatedly got wrong by hand: the real post-transition timeline of
 a crossfade chain, and the frame-exact length of a flattened caption track.
 
+## How are Salif's reusable voices selected?
+
+The three narrated packages each carry Salif French and Salif English in their
+Cartesia reference. When Salif's voice is selected, the approved narration language
+chooses the corresponding ID; ambiguity requires clarification. This does not
+replace the format's narrator default or an approved cast. A reusable mapping is
+not provider access, transferable voice rights, an audition, or paid-generation
+approval. Existing ElevenLabs profiles stay unchanged. See the
+[decision](DECISIONS.md#name-salifs-reusable-cartesia-voices-by-language--2026-09-09).
+
 ## What does validation establish?
 
 Audience/message review is separate from the checks below: technical or visual

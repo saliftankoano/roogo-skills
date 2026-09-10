@@ -111,3 +111,11 @@ account or grant permission to clone or use it. Validate access and usage rights
 before generation; if a voice is unavailable, request an authorized alternative
 instead of silently substituting one. Keep credentials and private access records
 outside this repository.
+
+Salif's reusable Cartesia choices are **Salif French** (`fr`) and **Salif English**
+(`en`). Each narrated package carries its exact mappings in its own Cartesia
+reference so copied packages remain self-contained. Select the language-matched
+voice when requested; existing narrator defaults and paid-generation approvals
+remain unchanged. See [Voxplainer](skills/voxplainer/references/cartesia.md),
+[Appel a proprietaires](skills/appel-proprietaires/references/cartesia.md), and
+[Video avantage](skills/video-avantage/references/cartesia.md).

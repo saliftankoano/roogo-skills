@@ -45,8 +45,9 @@ message. Flag a discovered audience problem separately instead of rewriting the 
   Roogo character voice **Rapoko** (`4SFJvuIUvxaPLgk8FoK3`; provider catalog name
   `Ropako-voice`). For complex teaching-led explainers, Cartesia **Wendata Nathalie
   Kaoré** (`fe4cf239-7292-499d-95a1-59c03e9caf2f`) is an approved slower-paced
-  alternative. Multi-voice films may also use Cartesia **Salif**
-  (`16dba105-0026-4ff7-bf90-12562786a97c`) as host and **Sandrine**
+  alternative. Multi-voice films may also use Cartesia **Salif French** or
+  **Salif English** as host, using the language-specific mappings in
+  [Cartesia](references/cartesia.md), and **Sandrine**
   (`2435841c-fce7-4fd5-aed1-dc7008eb7d20`) as tutorial instructor. Give every
   voice a stable story role and switch only at scene boundaries. Literal step-by-step screen
   demonstrations may use an installed Product Video / `product-demo-video` skill

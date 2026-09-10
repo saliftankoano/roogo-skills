@@ -45,6 +45,11 @@ stop and ask. Do not substitute another voice or another image model silently.
 
 ## Example prompt
 
+You can also request your language-matched **Salif French** or **Salif English**
+Cartesia voice; the [voice reference](references/cartesia.md) carries the exact
+mappings. English requires an explicitly approved adaptation of this French format.
+Existing narrator defaults, voice rights and generation approval still apply.
+
 ```text
 $appel-proprietaires A client is looking for a shop on the Nora road, between
 the grocery and the courthouse, to sell cosmetics, budget 50 000 FCFA a month,

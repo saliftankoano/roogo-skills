@@ -7,14 +7,24 @@ ElevenLabs remains the default narrator for this ad format. Cartesia is
 approved when the requester asks for it, when the default voice is
 unavailable, or when the ad wants a warmer, more instructional register.
 
-## Approved voice
+## Approved voices
 
 - **Sandrine**, voice ID `2435841c-fce7-4fd5-aed1-dc7008eb7d20`; provider
   catalog name `Sandrine rtb`. Approachable instructor register; the narrator
   role for this ad format on Cartesia.
+- **Salif French**, voice ID `16dba105-0026-4ff7-bf90-12562786a97c`;
+  French (`fr`) host/presenter when the requester selects Salif's own voice.
+- **Salif English**, voice ID `c84975e2-dba8-45ae-9fd7-53f2590ea7d2`;
+  English (`en`) host/presenter for an explicitly approved English adaptation.
+
+Salif supplied his two own-voice mappings for reuse on 2026-09-09. Match his
+selected voice to the approved narration language; ask if ambiguous. These options
+do not change the format's French-language default or Sandrine's narrator role,
+replace an approved voice, authorize paid generation, grant other users voice
+rights, or overwrite saved provider profiles.
 
 Treat the name and ID mapping as user-provided voice-catalog metadata. Choose by
-narrative function, and audition the voice in French before a paid batch. Model
+narrative function, and audition the voice in the approved language before a paid batch. Model
 level language support does not prove that an individual voice is a good
 language or brand fit, and this format's audience judges the voice immediately.
 
@@ -31,7 +41,7 @@ owners; a mid-ad voice change reads as two different advertisers.
 - For a known script, prefer the bytes endpoint or the official SDK's
   file-generation method. WebSocket and SSE add nothing when the full transcript
   is already written and approved.
-- Set the language to `fr`.
+- Set the language to `fr`, or `en` for an explicitly approved English adaptation.
 - Prefer `sonic-3.5`. Pin a dated stable snapshot when a build must be
   reproducible; do not use a floating latest alias for a delivered ad.
 - Generate a lossless WAV source at 44.1 or 48 kHz, then normalize and encode
@@ -46,7 +56,7 @@ header. A typical request contains:
 - `model_id`: the chosen stable Sonic model or pinned snapshot;
 - `transcript`: one complete section of the approved script;
 - `voice`: ID mode with the approved voice ID;
-- `language`: `fr`;
+- `language`: `fr`, or `en` for an approved English adaptation;
 - `output_format`: WAV, `pcm_s16le`, 44.1 kHz.
 
 Avoid the optional speed, emotion, and volume controls until the unmodified

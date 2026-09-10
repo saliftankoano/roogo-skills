@@ -42,6 +42,11 @@ from transcribing the synthetic narration track.
 
 ## Example prompt
 
+For a Salif host/presenter, select **Salif French** or **Salif English** from the
+[Cartesia reference](references/cartesia.md), matching the approved spoken
+language. Listing an English voice does not change this format's French default
+or the approved cast, and it does not authorize paid generation.
+
 ```text
 $video-avantage Make a 45 second French vertical video explaining why our
 commission is transparent compared with a classic broker. Use the approved

@@ -13,20 +13,27 @@ better served by its approved voices.
 - **Sandrine**, voice ID `2435841c-fce7-4fd5-aed1-dc7008eb7d20`; provider
   catalog name `Sandrine rtb`. Approachable instructor register; the narrator
   role for this format on Cartesia.
-- **Salif**, voice ID `16dba105-0026-4ff7-bf90-12562786a97c`; provider catalog
-  name `Salif voice`. Host and presenter; a named character or an on-camera
-  presenter beat.
+- **Salif French**, voice ID `16dba105-0026-4ff7-bf90-12562786a97c`; previously
+  listed as Salif / `Salif voice`. French (`fr`) host and presenter.
+- **Salif English**, voice ID `c84975e2-dba8-45ae-9fd7-53f2590ea7d2`.
+  English (`en`) host and presenter for an explicitly English production.
 - **Wendata Nathalie Kaoré**, voice ID
   `fe4cf239-7292-499d-95a1-59c03e9caf2f`. Slower, careful delivery for complex
   material; use when a comparison card needs the numbers landed deliberately.
 
 Treat these names and ID mappings as user-provided voice-catalog metadata.
 Choose by narrative function, not by novelty, and audition every selected voice
-in French before a paid batch. Model level language support does not prove that
+in the approved language before a paid batch. Model level language support does not prove that
 an individual voice is a good language or brand fit.
 
 In a multi-voice film, keep each voice on complete scene-sized segments, declare
 its role, and loudness-match the handoffs.
+
+Salif supplied both own-voice mappings for reuse on 2026-09-09. When his voice is
+selected, match it to the approved narration language; ask if ambiguous. Do not
+change this format's French-language or narrator defaults merely because an English
+voice is listed. The mappings do not authorize paid generation or other users'
+voice use, replace an approved cast, or overwrite saved provider profiles.
 
 ## Direction without emotion tags
 
@@ -62,7 +69,7 @@ done when the tag convention was validated on the other provider.
 - For a known script, prefer the bytes endpoint or the official SDK's
   file-generation method. WebSocket and SSE add nothing when the transcript is
   already written and approved.
-- Set the language to `fr`.
+- Set the language to `fr`, or `en` for an explicitly approved English production.
 - Prefer `sonic-3.5`. Pin a dated stable snapshot when a build must be
   reproducible; do not use a floating latest alias for a delivered video.
 - Generate a lossless WAV source at 44.1 or 48 kHz, then normalize and encode
@@ -77,7 +84,7 @@ header. A typical request contains:
 - `model_id`: the chosen stable Sonic model or pinned snapshot;
 - `transcript`: one complete scene-sized utterance;
 - `voice`: ID mode with the approved voice ID;
-- `language`: `fr`;
+- `language`: `fr`, or `en` for an approved English production;
 - `output_format`: WAV, `pcm_s16le`, 44.1 kHz.
 
 ## Brand name pronunciation
