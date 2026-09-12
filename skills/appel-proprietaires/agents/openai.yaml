@@ -1,0 +1,4 @@
+interface:
+  display_name: "Appel a proprietaires"
+  short_description: "Owner call-out ads for one property demand"
+  default_prompt: "Use $appel-proprietaires to turn this renter demand into an owner call-out ad bundle."

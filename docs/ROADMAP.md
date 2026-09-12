@@ -7,9 +7,17 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 
 ## Now
 
+- [ ] **Publish Salif's language-specific Cartesia choices** — keep his French and English voices discoverable in all three narrated packages without changing narrator defaults.
+  - Done when: package validation passes and the voice configuration is merged to `main`.
+  - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md#name-salifs-reusable-cartesia-voices-by-language--2026-09-09).
+
 - [ ] **Publish audience-first video planning** — guide audience selection, message framing, campaign organization, and message-readiness review across Voxplainer modes.
   - Done when: agent guidance, human examples, and public behavioral review cases are validated and merged to `main`.
   - Delivery branch: `feat/voxplainer-audience-messaging`. [Decision](DECISIONS.md).
+
+- [ ] **Publish the three Roogo ad-format skills** — migrate the owner call-out, feature explainer, and milestone video workflows as self-contained, public-safe packages with human guides and tested timing helpers.
+  - Done when: the three packages, the catalog entries, the logbook updates, and the helper tests are validated and merged to `main`.
+  - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md).
 
 ## Next
 

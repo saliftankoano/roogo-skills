@@ -4,6 +4,21 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Name Salif's reusable Cartesia voices by language — 2026-09-09
+
+**Decision:** Preserve Salif's French voice and add his distinct English voice to
+each narrated package's self-contained Cartesia reference, at his explicit request.
+
+**Why:** Future productions need a discoverable language-to-voice mapping without
+guessing from unnamed profiles or assuming one voice suits both languages.
+
+**Ruled out / alternatives:** No global provider switch, replacement of approved
+casts or narrator defaults, implied spending consent, new voice cloning, or stored
+credentials. The reusable IDs do not grant voice rights to repository readers.
+
+**Status:** Settled; implemented on the video-skills branch, not yet verified on
+main. See [voice configuration](SYSTEM.md#how-are-salifs-reusable-voices-selected).
+
 ### Plan audience and message before video production — 2026-09-09
 
 **Decision:** Add an audience/message planning layer across all Voxplainer modes,
@@ -19,6 +34,26 @@ Blanket script rewrites during technical fixes would exceed approved scope.
 
 **Status:** Settled direction; PR delivery and later adoption remain tracked in
 [ROADMAP.md](ROADMAP.md). See [SYSTEM.md](SYSTEM.md#audience-and-message-planning).
+
+### Publish the three Roogo ad formats as separate self-contained packages — 2026-09-09
+
+**Decision:** Migrate the owner call-out, feature explainer, and milestone video
+workflows as three packages with explicit exclusions in each description, and let
+them repeat shared Roogo video conventions and helpers instead of importing a common
+module. Inline the private production playbooks into package references, replacing
+machine paths, campaign folders, and customer specifics with supplied inputs.
+
+**Why:** Choosing the wrong format wastes paid generation, so the boundary has to be
+visible at invocation time rather than discovered mid-build. A package must also stay
+portable when it is copied alone into a user skills directory, and the private
+playbooks it grew from cannot be published as they were written.
+
+**Ruled out / alternatives:** One combined video skill with internal branching, which
+would load every format's rules on every invocation; a shared repository-level module
+for the watermark and conventions, which would break a package copied on its own;
+pointing at the private playbook paths, which are unreadable outside one machine.
+
+**Status:** Settled direction; delivery tracked in [ROADMAP.md](ROADMAP.md).
 
 ### Separate the human guide from the agent contract — 2026-09-09
 

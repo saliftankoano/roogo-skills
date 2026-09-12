@@ -11,8 +11,10 @@ for safe capture and evidence framing while preserving the requested format.
 
 ## Approved reusable voices
 
-- **Salif** — voice ID `16dba105-0026-4ff7-bf90-12562786a97c`; provider catalog
-  name `Salif voice`; host and product presenter.
+- **Salif French** — voice ID `16dba105-0026-4ff7-bf90-12562786a97c`; previously
+  listed as Salif / `Salif voice`; French (`fr`) host and product presenter.
+- **Salif English** — voice ID `c84975e2-dba8-45ae-9fd7-53f2590ea7d2`;
+  English (`en`) host and product presenter.
 - **Sandrine** — voice ID `2435841c-fce7-4fd5-aed1-dc7008eb7d20`; provider catalog
   name `Sandrine rtb`; approachable tutorial instructor.
 - **Wendata Nathalie Kaoré** — voice ID
@@ -24,11 +26,17 @@ narrative function and audition every selected voice in the target language befo
 a paid batch. In a multi-voice film, keep each voice on complete scene-sized
 segments, declare its role, and loudness-match the handoffs.
 
+Salif explicitly supplied both own-voice mappings for reuse on 2026-09-09. If his
+voice is selected, match French narration to Salif French and English narration to
+Salif English; ask when language is ambiguous. These mappings do not replace an
+approved voice, change the editorial default, authorize paid generation, or grant
+other users voice rights. Verify access and preserve existing provider profiles.
+
 ## Production defaults
 
 - Read credentials from `CARTESIA_API_KEY`; never expose or commit the value. On macOS, a reusable alternative is a generic login-Keychain item with service `ai.cartesia.api-key` and account `default`. Retrieve only the password with `/usr/bin/security find-generic-password -s ai.cartesia.api-key -a default -w`, without printing or logging it.
 - For offline scene narration, prefer the bytes endpoint or official SDK file-generation method. WebSocket and SSE add no value when the full scene transcript is already known.
-- Use French language guidance (`fr`) for French narration.
+- Set language explicitly: `fr` for French narration, `en` for English narration.
 - Prefer `sonic-3.5` for current development. Pin a dated stable snapshot in a release contract when reproducibility matters; do not use `sonic-latest` for a release master.
 - Generate a lossless WAV source at 44.1 or 48 kHz, then normalize and encode the project delivery format. Do not use raw PCM unless the caller also records and applies its encoding metadata.
 - Preserve the exact voice ID supplied by the user and audition it in the target language. Model-level language support does not prove that an individual voice is a good language or brand fit.
@@ -40,7 +48,7 @@ Use the current official Cartesia SDK or `POST /tts/bytes` with the required API
 - `model_id`: the chosen stable Sonic model or pinned snapshot;
 - `transcript`: one complete scene-sized utterance;
 - `voice`: ID mode with the approved voice ID;
-- `language`: `fr` for French;
+- `language`: `fr` for French or `en` for English;
 - `output_format`: WAV, `pcm_s16le`, 44.1 kHz.
 
 Avoid optional speed, emotion and volume controls until the unmodified sample has been auditioned. When controls are used, record them in the manifest and regenerate the approval sample because they can materially change delivery.

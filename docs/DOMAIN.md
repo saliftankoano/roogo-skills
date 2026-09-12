@@ -103,3 +103,70 @@ with source, license, and modification records.
 does not prove redistribution rights; revisions must not destroy the original.
 
 **Evidence:** [Asset provenance](../skills/voxplainer/references/asset-provenance.md).
+
+### Ad bundle
+
+**Meaning:** Everything one publishable ad needs, delivered together: the approved
+script, the narration, the rendered video, and the social copy for each surface it is
+posted to.
+
+**Origin:** Roogo marketing practice, where one person writes, renders, and publishes.
+
+**Why it matters for building:** A rendered file alone is not deliverable work. The
+bundle also carries its own posting state, so a file that has not been moved into the
+published subfolder is still unposted.
+
+**Evidence:** [Default bundle](../skills/appel-proprietaires/SKILL.md).
+
+### Post-transition timeline
+
+**Meaning:** The real on-screen time of every clip in a crossfade chain, after each
+transition has consumed one crossfade of overlap.
+
+**Origin:** Repeated ffmpeg timing errors on carousel builds.
+
+**Why it matters for building:** The naive cumulative sum drifts further wrong with
+every transition, which both overruns the narration and misplaces the watermark
+exclusion windows over full-logo cards.
+
+**Evidence:** [xfade_timeline.py](../skills/appel-proprietaires/scripts/xfade_timeline.py).
+
+### Flattened caption track
+
+**Meaning:** All caption states rendered as clips and concatenated into one
+transparent video track, overlaid on the base video in a single pass.
+
+**Origin:** A build that chained about a hundred individually timed overlays and ran
+for over three hours before being killed.
+
+**Why it matters for building:** Per-overlay chaining reprocesses the whole video at
+every stage, and per-clip durations in seconds accumulate rounding drift. Frame-exact
+counts from rounded cumulative targets keep the track aligned with the video.
+
+**Evidence:** [caption_timing.py](../skills/video-avantage/scripts/caption_timing.py).
+
+### Cheap path and premium path
+
+**Meaning:** The two ways to animate a milestone graphic: a free zoom, or generated
+motion costing real money per clip.
+
+**Origin:** The first milestone build, produced both ways for comparison.
+
+**Why it matters for building:** The cost gap is roughly forty to fifty times, so the
+path is the requester's decision on every build, and actual spend is reported back
+rather than buried in a log.
+
+**Evidence:** [Cheap or premium](../skills/milestone/README.md).
+
+### Confirmed by ear
+
+**Meaning:** A sound-dependent choice accepted by a person listening to a short test
+clip, not by a successful generation or a valid voice ID.
+
+**Origin:** Rejected narration takes that were technically correct and audibly wrong.
+
+**Why it matters for building:** Voice endpoint, emotion tags, and brand-name
+spelling all change how a voice sounds while every automated check still passes.
+Guessing and rebuilding the whole video around the guess is the expensive failure.
+
+**Evidence:** [Narration and character voice](../skills/video-avantage/references/narration-and-voice.md).
