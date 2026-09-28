@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr" data-composition-variables='[
+  {"id":"headline","type":"string","label":"Type de bien (petit, en capitales)","default":"MAISON À VENDRE"},
+  {"id":"location","type":"string","label":"Quartier, ville","default":"Nakamtenga, Koubri"},
+  {"id":"price","type":"string","label":"Prix (chiffres seuls)","default":"15 000 000"},
+  {"id":"currency","type":"string","label":"Devise / suffixe du prix","default":"FCFA"},
+  {"id":"note","type":"string","label":"Une ligne de détail (vide = masquée)","default":"Gros oeuvre réalisé, 3 chambres salon"},
+  {"id":"cta","type":"string","label":"Bouton blanc au-dessus du contact (vide = pas de bouton)","default":""},
+  {"id":"contact_label","type":"string","label":"Phrase au-dessus du numéro","default":"Appelez ou écrivez-nous sur WhatsApp"},
+  {"id":"phone","type":"string","label":"Numéro (vide = masqué)","default":"+226 67 00 61 16"},
+  {"id":"footer","type":"string","label":"Pied de page","default":"roogobf.com"},
+  {"id":"bg","type":"string","label":"Photo de fond dans assets/ (vide = fond orange)","default":""}
+]'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>Roogo Outro Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=block" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #cb7215; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Nunito", sans-serif; }
+      .bg { position: absolute; inset: 0; background: linear-gradient(180deg, #cb7215 0%, #a85c0e 100%); }
+      .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+      .shade { position: absolute; inset: 0; display: none;
+        background: linear-gradient(180deg, rgba(43,36,29,0.55) 0%, rgba(43,36,29,0.78) 45%, rgba(43,36,29,0.92) 100%); }
+      #root.has-photo .photo, #root.has-photo .shade { display: block; }
+      .clip { position: absolute; inset: 0; }
+
+      /* Group 1: brand */
+      .logo-glow {
+        position: absolute; left: 50%; top: 300px; width: 440px; height: 440px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+        border-radius: 50%; opacity: 0; pointer-events: none;
+      }
+      .logo-badge {
+        position: absolute; left: 50%; top: 300px; width: 180px; height: 180px;
+        transform: translate(-50%, -50%); background: #ffffff; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; opacity: 0;
+      }
+      .logo-badge img { width: 124px; height: 124px; object-fit: contain; }
+
+      /* Group 2: what, where, how much */
+      .line { position: absolute; left: 0; right: 0; text-align: center; padding: 0 60px; opacity: 0; }
+      .headline { top: 560px; font-size: 38px; font-weight: 800; color: #f4e8d7; letter-spacing: 6px; }
+      .location { top: 615px; font-size: 64px; font-weight: 900; color: #ffffff; }
+      .price { top: 760px; color: #ffffff; padding: 0 30px; }
+      .price .amount { display: block; font-size: 150px; font-weight: 900; letter-spacing: 1px; line-height: 1; }
+      .price .currency { display: block; font-size: 48px; font-weight: 800; color: #f4e8d7; letter-spacing: 6px; margin-top: 14px; }
+      .note { top: 1010px; font-size: 36px; font-weight: 700; color: #f4e8d7; }
+
+      /* Group 3: one action */
+      .cta-pill {
+        position: absolute; left: 50%; top: 1230px; transform: translateX(-50%);
+        background: #ffffff; border-radius: 100px; padding: 26px 52px; opacity: 0;
+      }
+      .cta-pill span { font-size: 46px; font-weight: 900; color: #cb7215; letter-spacing: 1px; white-space: nowrap; }
+      .contact { top: 1300px; }
+      #root.has-cta .contact { top: 1400px; }
+      .contact-label { font-size: 38px; font-weight: 800; color: #f4e8d7; }
+      .phone-pill {
+        display: inline-block; margin-top: 26px; background: #2b241d; border-radius: 100px;
+        padding: 26px 60px; font-size: 80px; font-weight: 900; color: #ffffff; letter-spacing: 2px; line-height: 1;
+      }
+      #root.has-photo .phone-pill { background: #cb7215; }
+      .footer { top: 1760px; font-size: 34px; font-weight: 800; color: #f4e8d7; letter-spacing: 1px; }
+      .sparkle { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="roogo-outro" data-start="0" data-width="1080" data-height="1920" data-duration="5.5">
+      <div id="bg" class="bg clip" data-start="0" data-duration="5.5">
+        <img id="photo" class="photo" data-var-src="bg" src="assets/roogo-logo.png" alt="">
+        <div class="shade"></div>
+      </div>
+
+      <section id="scene" class="clip" data-start="0" data-duration="5.5">
+        <div id="logo-glow" class="logo-glow"></div>
+        <div id="logo-badge" class="logo-badge"><img src="assets/roogo-logo.png" alt="Roogo"></div>
+
+        <div id="headline" class="line headline" data-var-text="headline">MAISON À VENDRE</div>
+        <div id="location" class="line location" data-var-text="location">Nakamtenga, Koubri</div>
+        <div id="price" class="line price">
+          <span id="amount" class="amount" data-var-text="price">15 000 000</span>
+          <span class="currency" data-var-text="currency">FCFA</span>
+        </div>
+        <div id="note" class="line note" data-var-text="note">Gros oeuvre réalisé, 3 chambres salon</div>
+
+        <div id="cta-pill" class="cta-pill"><span data-var-text="cta"></span></div>
+        <div id="contact" class="line contact">
+          <div class="contact-label" data-var-text="contact_label">Appelez ou écrivez-nous sur WhatsApp</div>
+          <div id="phone" class="phone-pill" data-var-text="phone">+226 67 00 61 16</div>
+        </div>
+        <div id="footer" class="line footer" data-var-text="footer">roogobf.com</div>
+
+        <div id="s1" class="sparkle" style="left: 150px; top: 800px;"></div>
+        <div id="s2" class="sparkle" style="left: 920px; top: 770px;"></div>
+        <div id="s3" class="sparkle" style="left: 110px; top: 930px;"></div>
+        <div id="s4" class="sparkle" style="left: 950px; top: 900px;"></div>
+      </section>
+
+      <script>
+        (function () {
+          const v = (window.__hyperframes && window.__hyperframes.getVariables) ? window.__hyperframes.getVariables() : {};
+          const val = (id, el) => (typeof v[id] === "string" ? v[id] : (el ? el.textContent : "")).trim();
+          const root = document.getElementById("root");
+          if (val("bg")) root.classList.add("has-photo");
+          if (val("cta", document.querySelector("#cta-pill span"))) root.classList.add("has-cta");
+          else document.getElementById("cta-pill").style.display = "none";
+          if (!val("note", document.getElementById("note"))) document.getElementById("note").style.display = "none";
+          if (!val("phone", document.getElementById("phone"))) document.getElementById("contact").style.display = "none";
+          // Long amounts shrink to stay on one line.
+          const len = val("price", document.getElementById("amount")).length;
+          if (len > 10) document.getElementById("amount").style.fontSize = Math.max(96, Math.floor(150 * 10 / len)) + "px";
+
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#logo-glow", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }, 0.1);
+          tl.to("#logo-glow", { opacity: 0, scale: 1.6, duration: 1.0, ease: "power2.out" }, 0.65);
+          tl.fromTo("#logo-badge", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, 0.15);
+          tl.fromTo("#headline", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.6);
+          tl.fromTo("#location", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.75);
+          tl.fromTo("#price", { opacity: 0, scale: 0.7, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.8)" }, 1.05);
+          [["#s1", 1.25], ["#s2", 1.3], ["#s3", 1.35], ["#s4", 1.4]].forEach(([id, t]) => {
+            tl.fromTo(id, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }, t);
+            tl.to(id, { opacity: 0, duration: 0.5, ease: "power2.in" }, t + 0.3);
+          });
+          tl.fromTo("#note", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.5);
+          tl.fromTo("#cta-pill", { opacity: 0, scale: 0.6, y: 18 }, { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: "back.out(2.4)" }, 1.9);
+          tl.fromTo("#contact", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.6)" }, 2.0);
+          tl.fromTo("#footer", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.5);
+          if (root.classList.contains("has-photo")) tl.fromTo("#photo", { scale: 1.0 }, { scale: 1.06, duration: 5.5, ease: "none" }, 0);
+
+          window.__timelines = window.__timelines || {};
+          window.__timelines["roogo-outro"] = tl;
+          tl.seek(0);
+        })();
+      </script>
+    </div>
+  </body>
+</html>

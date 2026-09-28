@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visite POV"
+  short_description: "Turn listing photos into a narrated POV video"
+  default_prompt: "Use $visite-pov to make a POV walkthrough video from these listing photos."

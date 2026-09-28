@@ -28,7 +28,7 @@ timing; implementation produces previews; encoded review checks the delivered
 artifact. Missing evidence or unauthorized paid work stops that part of production,
 not permission to invent a result. A concept request ends before rendering.
 
-## How do the three ad formats divide the work?
+## How do the Roogo video formats divide the work?
 
 Each package answers one question the requester already knows the answer to, so the
 routing happens before any paid generation. A specific renter or buyer demand that
@@ -36,6 +36,8 @@ should make owners call is [Appel a proprietaires](../skills/appel-proprietaires
 A feature, differentiator, or business-model benefit with no listing photography to
 build from is [Video avantage](../skills/video-avantage/README.md). An existing
 celebration graphic that needs to move is [Milestone](../skills/milestone/README.md).
+One live listing with only photos, and no filmed visit, is
+[Visite POV](../skills/visite-pov/README.md).
 Every package states its own exclusions, and each one stops for approval of the
 script, the numbers, or the cost path before spending.
 
@@ -45,7 +47,9 @@ numbers, and timing, plus one reference per provider that is read only when that
 provider is selected. ElevenLabs with the narrator voice Alimata is their
 default and Cartesia is the approved alternative, with Sandrine in the narrator
 role. Milestone selects no provider, because a milestone post is scored rather
-than narrated.
+than narrated. Visite POV uses Cartesia with Sandrine only: the ElevenLabs
+narrator was tried on that format and rejected for flat delivery and unstable
+numbers between takes.
 
 They share standing Roogo video conventions rather than a shared module: the corner
 watermark excluded over full-logo spans, captions kept clear of on-screen graphics,

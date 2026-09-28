@@ -4,6 +4,25 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Publish the POV listing walkthrough as its own package — 2026-09-28
+
+**Decision:** Add `visite-pov` for live listings that only have photos: camera
+drift on the real photos, Sandrine on Cartesia, a HyperFrames outro whose only
+action is calling or messaging the Roogo number, and French captions for posting.
+
+**Why:** The format was proven on a real listing with the founder's review: the
+earlier outro had too much text and white, the ElevenLabs narrator sounded flat
+and changed a year between takes, and an app-download button competed with the
+contact action a listing video exists to produce.
+
+**Ruled out / alternatives:** Folding it into `appel-proprietaires` (different
+audience and direction of the call); AI presenters for property videos (banned
+after frozen presenters and poor lip sync); shipping the logo, fonts or listing
+photos (not public-safe; supplied per machine).
+
+**Status:** Settled; delivered on branch `feat/visite-pov`, not yet verified on
+main. See [SYSTEM.md](SYSTEM.md#how-do-the-roogo-video-formats-divide-the-work).
+
 ### Name Salif's reusable Cartesia voices by language — 2026-09-09
 
 **Decision:** Preserve Salif's French voice and add his distinct English voice to

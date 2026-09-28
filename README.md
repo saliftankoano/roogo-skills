@@ -36,6 +36,9 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 - [Milestone — human guide](skills/milestone/README.md) — an existing celebration
   graphic turned into a scored 9:16 video post, on a cheap zoom path or a paid
   generated-motion path.
+- [Visite POV — human guide](skills/visite-pov/README.md) — a live listing's real
+  photos turned into a narrated 9:16 walkthrough with slow camera drift, a price
+  and contact outro, and French captions for posting.
 
 A skill is a set of instructions and supporting resources for an agent, not a
 standalone video app. Start with each human guide for installation, requirements,
@@ -46,7 +49,7 @@ The three Roogo ad formats are deliberately separate packages with explicit
 boundaries, because choosing the wrong one wastes paid generation. One renter or
 buyer demand calling owners in is `appel-proprietaires`; a feature or benefit with no
 photography to build from is `video-avantage`; an existing celebration graphic to
-animate is `milestone`.
+animate is `milestone`; a live listing with only photos is `visite-pov`.
 
 ## Quick start
 
