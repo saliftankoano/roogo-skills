@@ -20,8 +20,8 @@ audience and direction of the call); AI presenters for property videos (banned
 after frozen presenters and poor lip sync); shipping the logo, fonts or listing
 photos (not public-safe; supplied per machine).
 
-**Status:** Settled; delivered on branch `feat/visite-pov`, not yet verified on
-main. See [SYSTEM.md](SYSTEM.md#how-do-the-roogo-video-formats-divide-the-work).
+**Status:** Settled; verified merged to `main` in [PR #5](https://github.com/saliftankoano/roogo-skills/pull/5).
+See [SYSTEM.md](SYSTEM.md#how-do-the-roogo-video-formats-divide-the-work).
 
 ### Name Salif's reusable Cartesia voices by language — 2026-09-09
 

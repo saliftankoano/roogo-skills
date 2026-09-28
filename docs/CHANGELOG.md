@@ -5,6 +5,10 @@ the application's release history. See [DECISIONS.md](DECISIONS.md) for why,
 [SYSTEM.md](SYSTEM.md) for how, [DOMAIN.md](DOMAIN.md) for terms, and
 [ROADMAP.md](ROADMAP.md) for unfinished work.
 
+## 2026-09-28
+
+- Published `visite-pov`, the POV listing walkthrough skill: camera drift on real listing photos, Sandrine narration, a HyperFrames outro with a single call/WhatsApp contact action, face blurring, and French posting captions, with synthetic-media tests — verified merged in [PR #5](https://github.com/saliftankoano/roogo-skills/pull/5).
+
 ## 2026-09-09
 
 - Published the human-facing Voxplainer guide, mode explanations, and five-document project logbook — verified merged in [PR #2](https://github.com/saliftankoano/roogo-skills/pull/2).
