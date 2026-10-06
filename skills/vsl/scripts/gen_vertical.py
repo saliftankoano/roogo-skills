@@ -119,7 +119,7 @@ sfx=[("birds_morning.mp3",0.0,6.4,.35),
  ("pop.mp3",30.9,None,.4),("pop.mp3",33.7,None,.4),("pop.mp3",36.5,None,.4),("pop.mp3",39.3,None,.4),
  ("ding.mp3",36.6,None,.45),("paper.wav",39.4,None,.5),
  ("whoosh.wav",42.6,None,.3),("pop.mp3",44.4,None,.45),("pop.mp3",49.7,None,.45),("pop.mp3",53.5,None,.45),
- 
+
  ("pop.mp3",63.6,None,.3),("pop.mp3",64.0,None,.3),("pop.mp3",64.4,None,.3),
  ("chime.wav",68.3,None,.4)]+[("pop.mp3",68.24+0.3*k+0.05,None,.2) for k in range(1,7)]
 tr=10
