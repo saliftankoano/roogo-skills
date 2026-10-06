@@ -1,0 +1,4 @@
+interface:
+  display_name: "VSL"
+  short_description: "Build a sales video for the website and social"
+  default_prompt: "Use $vsl to make a video sales letter for Roogo property owners, with a 16:9 website version and a 9:16 social version."

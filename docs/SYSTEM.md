@@ -38,6 +38,8 @@ build from is [Video avantage](../skills/video-avantage/README.md). An existing
 celebration graphic that needs to move is [Milestone](../skills/milestone/README.md).
 One live listing with only photos, and no filmed visit, is
 [Visite POV](../skills/visite-pov/README.md).
+A sales pitch that persuades on the website and in social ads, with a promise,
+pains, mechanism, objections and one ask, is [VSL](../skills/vsl/README.md).
 Every package states its own exclusions, and each one stops for approval of the
 script, the numbers, or the cost path before spending.
 

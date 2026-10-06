@@ -39,17 +39,20 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 - [Visite POV — human guide](skills/visite-pov/README.md) — a live listing's real
   photos turned into a narrated 9:16 walkthrough with slow camera drift, a price
   and contact outro, and French captions for posting.
+- [VSL — human guide](skills/vsl/README.md) — a video sales letter: a promise, the
+  pains the viewer recognizes, how it works, objections answered, then the ask;
+  a 16:9 version for the website and a 9:16 version for social.
 
 A skill is a set of instructions and supporting resources for an agent, not a
 standalone video app. Start with each human guide for installation, requirements,
 modes, example prompts, and review checkpoints; its `SKILL.md` is the agent-facing
 operating contract.
 
-The three Roogo ad formats are deliberately separate packages with explicit
+The Roogo video formats are deliberately separate packages with explicit
 boundaries, because choosing the wrong one wastes paid generation. One renter or
 buyer demand calling owners in is `appel-proprietaires`; a feature or benefit with no
 photography to build from is `video-avantage`; an existing celebration graphic to
-animate is `milestone`; a live listing with only photos is `visite-pov`.
+animate is `milestone`; a live listing with only photos is `visite-pov`; a sales pitch that persuades on the website and social is `vsl`.
 
 ## Quick start
 
