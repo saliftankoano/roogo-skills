@@ -11,11 +11,11 @@ license each one and record its source. Suggested placement and relative volume
 | Calls | Phone vibrates, rings unanswered, stops | 0.2 |
 | Chasing rent | Hot dry wind and a muffled street | 0.35 and 0.15 |
 | How it works | Soft pop per step; payment "ding" on the mobile-money step; receipt paper on the last step | 0.4 to 0.5 |
-| Price | Low whoosh on the title; a pop as each card appears; a soft checkmark on "no fee if no tenant" | 0.3 to 0.45 |
+| Price | Low whoosh on the title; a pop as each card appears | 0.3 to 0.45 |
 | Packs | Three pops 0.4 s apart | 0.3 |
 | Outro | Short success chime, then a very quiet pop per staggered element | 0.4 and 0.2 |
 
-Avoid: gate creaks, key jingles and motorbike engine noise (judged annoying in
+Avoid: a checkmark or other scribble-like sound after the 7 % line (it read as an annoying scribble), gate creaks, key jingles and motorbike engine noise (judged annoying in
 review), and any phone buzz louder than 0.2.
 
 Text prompts that worked with a text-to-sound-effect generator: "night crickets

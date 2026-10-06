@@ -16,6 +16,10 @@ description: >-
 
 # VSL
 
+If the project keeps a business knowledge base (Roogo: the Obsidian vault, note
+`04 Marketing/Playbooks/VSL.md`), read its VSL playbook and the fee and conflict
+notes first.
+
 A VSL (video sales letter) is a sales pitch as a video: it states a promise,
 shows the viewer their own problems, explains the mechanism, answers the
 objections, then asks for one action. Read [README.md](README.md) for the plain
@@ -41,7 +45,9 @@ separately for paid ads.
 3. **Assets: look first, generate last.** Use real listing photos and existing
    footage wherever they exist. Generate only what does not exist (a person, a
    phone in a hand). Drop photos that show business names, addresses or
-   phone-brand watermarks. State the plan and cost before generating. Confirm
+   phone-brand watermarks. **Pick photos per format**: landscape photos only for
+   16:9, portrait photos only for 9:16 (see the house rules); never fill a
+   format with the other shape. State the plan and cost before generating. Confirm
    with the user that listing photos may be used in advertising.
 4. **Generated shots.** Still image, then image-to-video (about 5 seconds per
    shot). For the same character in a second shot, pass the first still as a

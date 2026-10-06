@@ -35,8 +35,8 @@ def montage(i,imgs):
         js.append(f'tl.fromTo("#m{i}_{k}",{{scale:{1.0 if k%2==0 else 1.09}}},{{scale:{1.09 if k%2==0 else 1.0},duration:{per+0.3:.2f},ease:"none"}},{t0:.2f});')
         if k<n-1: js.append(f'tl.set("#m{i}_{k}",{{opacity:0}},{t0+per+0.2:.2f});')
     fadein(f"#sc{i}",i)
-montage(1,["a100.jpg","a109.jpg","a94.jpg","a97.jpg"])
-montage(2,["a113.jpg","a117.jpg","a125.jpg","a115.jpg","a118.jpg"])
+montage(1,["a109.jpg","a94.jpg","a97.jpg","a95.jpg"])
+montage(2,["a206.jpg","a121.jpg","a88.jpg","a96.jpg","a207.jpg"])
 # s3 video, s4 two clips (blurred copy behind, contained copy in front)
 def vid(i,src,st,du,tr,extra="",rate=None):
     pr=f' data-playback-rate="{rate:.3f}"' if rate else ""
@@ -55,7 +55,7 @@ js.append(f'tl.fromTo("#sc4b,#sc4bbg",{{opacity:0}},{{opacity:1,duration:0.2,eas
 st,du,s=box(5)
 steps=[("1","Vous publiez","Photos, prix, quartier"),("2","Des locataires","Visites organisées"),("3","Mobile money","Orange ou Moov"),("4","Reçus","Suivi des paiements")]
 cards="".join(f'<div class="step"><div class="num">{n}</div><h3>{t}</h3><p>{d}</p></div>' for n,t,d in steps)
-ph=["a45.jpg","a40.jpg","a51.jpg","a63.jpg","a23.jpg","a64.jpg","a29.jpg","a104.jpg"]
+ph=["a23.jpg","a104.jpg","a105.jpg","r1.jpg","a102.jpg","a101.jpg","a100.jpg"]
 frames="".join(f'<img class="ph" id="ph{k}" src="assets/{p}">' for k,p in enumerate(ph))
 html.append(f'<div id="sc5" class="clip scene cream" data-start="{st:.2f}" data-duration="{du:.2f}" data-track-index="1" style="z-index:5"><div class="kick">Comment ça marche</div><h2>Quatre étapes, tout est visible</h2><div class="frame">{frames}</div><div class="grid">{cards}</div></div>')
 fadein("#sc5",5)
@@ -119,7 +119,7 @@ sfx=[("birds_morning.mp3",0.0,6.4,.35),
  ("pop.mp3",30.9,None,.4),("pop.mp3",33.7,None,.4),("pop.mp3",36.5,None,.4),("pop.mp3",39.3,None,.4),
  ("ding.mp3",36.6,None,.45),("paper.wav",39.4,None,.5),
  ("whoosh.wav",42.6,None,.3),("pop.mp3",44.4,None,.45),("pop.mp3",49.7,None,.45),("pop.mp3",53.5,None,.45),
- ("check.mp3",(lastpas[0]-0.05) if lastpas else 59.5,None,.4),
+ 
  ("pop.mp3",63.6,None,.3),("pop.mp3",64.0,None,.3),("pop.mp3",64.4,None,.3),
  ("chime.wav",68.3,None,.4)]+[("pop.mp3",68.24+0.3*k+0.05,None,.2) for k in range(1,7)]
 tr=10

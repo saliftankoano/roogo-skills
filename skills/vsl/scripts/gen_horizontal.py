@@ -23,7 +23,7 @@ def fadein(sel,i):
 from PIL import Image
 def shot_html(sid,img):
     w,h=Image.open(f"assets/{img}").size
-    if w/h>=1.5: return f'<div class="shot" id="{sid}"><img class="cover" src="assets/{img}"></div>'
+    if w/h>=1.3: return f'<div class="shot" id="{sid}"><img class="cover" src="assets/{img}"></div>'
     return f'<div class="shot" id="{sid}"><img class="cover bgb" src="assets/{img}"><img class="cover fg" src="assets/{img}"></div>'
 def montage(i,imgs):
     st,du,s=box(i);n=len(imgs);per=(du-0.1)/n
@@ -35,7 +35,7 @@ def montage(i,imgs):
         js.append(f'tl.fromTo("#m{i}_{k}",{{scale:{1.0 if k%2==0 else 1.09}}},{{scale:{1.09 if k%2==0 else 1.0},duration:{per+0.3:.2f},ease:"none"}},{t0:.2f});')
         if k<n-1: js.append(f'tl.set("#m{i}_{k}",{{opacity:0}},{t0+per+0.2:.2f});')
     fadein(f"#sc{i}",i)
-montage(1,["a100.jpg","a109.jpg","a94.jpg","a97.jpg"])
+montage(1,["r26.jpg","a100.jpg","a101.jpg","a105.jpg"])
 montage(2,["a113.jpg","a117.jpg","a125.jpg","a115.jpg","a118.jpg"])
 # s3 video, s4 two clips
 st,du,s=box(3)
@@ -116,7 +116,7 @@ sfx=[("birds_morning.mp3",0.0,6.4,.35),
  ("pop.mp3",30.9,None,.4),("pop.mp3",33.7,None,.4),("pop.mp3",36.5,None,.4),("pop.mp3",39.3,None,.4),
  ("ding.mp3",36.6,None,.45),("paper.wav",39.4,None,.5),
  ("whoosh.wav",42.6,None,.3),("pop.mp3",44.4,None,.45),("pop.mp3",49.7,None,.45),("pop.mp3",53.5,None,.45),
- ("check.mp3",(lastpas[0]-0.05) if lastpas else 59.5,None,.4),
+ 
  ("pop.mp3",63.6,None,.3),("pop.mp3",64.0,None,.3),("pop.mp3",64.4,None,.3),
  ("chime.wav",68.3,None,.4)]+[("pop.mp3",68.24+0.3*k+0.05,None,.2) for k in range(1,7)]
 tr=10
