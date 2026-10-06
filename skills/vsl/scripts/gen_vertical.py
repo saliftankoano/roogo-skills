@@ -37,20 +37,19 @@ def montage(i,imgs):
     fadein(f"#sc{i}",i)
 montage(1,["a109.jpg","a94.jpg","a97.jpg","a95.jpg"])
 montage(2,["a206.jpg","a121.jpg","a88.jpg","a96.jpg","a207.jpg"])
-# s3 video, s4 two clips (blurred copy behind, contained copy in front)
-def vid(i,src,st,du,tr,extra="",rate=None):
+# s3 video, s4 two clips: native vertical clips, full bleed
+def vid(i,src,st,du,tr,rate=None):
     pr=f' data-playback-rate="{rate:.3f}"' if rate else ""
-    html.append(f'<video id="{i}bg" class="clip scene cover bgb" src="assets/{src}" muted playsinline data-start="{st:.2f}" data-duration="{du:.2f}" data-track-index="{tr+30}" style="z-index:{tr+1}"{pr}></video>')
-    html.append(f'<video id="{i}" class="clip scene cover fg" src="assets/{src}" muted playsinline data-start="{st:.2f}" data-duration="{du:.2f}" data-track-index="{tr}" style="z-index:{tr+2}"{pr}></video>')
+    html.append(f'<video id="{i}" class="clip scene cover" src="assets/{src}" muted playsinline data-start="{st:.2f}" data-duration="{du:.2f}" data-track-index="{tr}" style="z-index:{tr+2}"{pr}></video>')
 st,du,s=box(3)
-vid("sc3","clip_s3.mp4",st,du,1,rate=5.0417/S["s3"]["d"])
-fadein("#sc3",3);fadein("#sc3bg",3)
+vid("sc3","clip_v_phone.mp4",st,du,1,rate=5.0417/du)
+fadein("#sc3",3)
 st,du,s=box(4)
 cut=3.9
-vid("sc4a","clip_s4.mp4",st,cut+0.2,0)
-fadein("#sc4a",4);fadein("#sc4abg",4)
-vid("sc4b","clip_s4c.mp4",st+cut,du-cut,2)
-js.append(f'tl.fromTo("#sc4b,#sc4bbg",{{opacity:0}},{{opacity:1,duration:0.2,ease:"none"}},{st+cut:.2f});')
+vid("sc4a","clip_v_moto.mp4",st,cut+0.2,0)
+fadein("#sc4a",4)
+vid("sc4b","clip_v_knock.mp4",st+cut,du-cut,2)
+js.append(f'tl.fromTo("#sc4b",{{opacity:0}},{{opacity:1,duration:0.2,ease:"none"}},{st+cut:.2f});')
 # s5 steps with portrait photo frame
 st,du,s=box(5)
 steps=[("1","Vous publiez","Photos, prix, quartier"),("2","Des locataires","Visites organisées"),("3","Mobile money","Orange ou Moov"),("4","Reçus","Suivi des paiements")]

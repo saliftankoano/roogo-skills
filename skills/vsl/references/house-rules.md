@@ -6,8 +6,8 @@
    (ratio 0.85 or narrower) that fill the frame, and landscape photos only where
    the layout box is itself landscape (for example the picture frame beside the
    step cards). A portrait photo on a blurred landscape frame, or a landscape
-   photo on a blurred portrait frame, breaks the immersion; blur bars are only
-   for the generated clips. If a format lacks enough good photos of the right
+   photo on a blurred portrait frame, breaks the immersion; generated clips are made natively for each format (a 9:16 still and clip
+   for the vertical version, a 16:9 one for the horizontal), so nothing needs blur bars. If a format lacks enough good photos of the right
    shape, say so and ask rather than filling it with the wrong ones.
 
 1. **Real assets first.** Real photos beat generated ones everywhere except
@@ -29,9 +29,8 @@
    the outro.
 6. **Music.** One instrumental you have the rights to, at volume 0.14, fading
    out over the last 1.6 seconds. Never louder than the voice.
-7. **Vertical version.** A separate layout, not a crop: portrait photos fill the
-   frame; landscape photos and clips sit full width over a blurred copy of
-   themselves; cards stack in one column; captions sit below the picture area.
+7. **Vertical version.** A separate layout, not a crop: portrait photos and the
+   natively vertical generated clips fill the frame; cards stack in one column; captions sit below the picture area.
 8. **Cards.** Give each its own entrance on the spoken word. Keep captions off
    the cards.
 9. **Verification.** Render stills at every scene midpoint and in both outros;

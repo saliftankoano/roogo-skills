@@ -50,7 +50,9 @@ separately for paid ads.
    format with the other shape. State the plan and cost before generating. Confirm
    with the user that listing photos may be used in advertising.
 4. **Generated shots.** Still image, then image-to-video (about 5 seconds per
-   shot). For the same character in a second shot, pass the first still as a
+   shot), generated separately for each format: a 9:16 still and clip for the
+   vertical version, a 16:9 one for the horizontal. Never letterbox a clip on
+   blur bars. For the same character in a second shot, pass the first still as a
    reference and change the action; check the face. Never leave one clip on
    screen for more than about 4 seconds.
 5. **Voice.** `scripts/build_vo.py scenes.json` writes Sandrine's narration per
