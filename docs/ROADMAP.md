@@ -19,10 +19,6 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
   - Done when: the three packages, the catalog entries, the logbook updates, and the helper tests are validated and merged to `main`.
   - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md).
 
-- [ ] **Publish the VSL skill** — package the owner VSL method as a self-contained, public-safe skill with a human guide.
-  - Done when: package validation and tests pass and the pull request is merged to `main`.
-  - Delivery branch: `feat/vsl-skill`. [Decision](DECISIONS.md#publish-the-vsl-as-its-own-package-real-assets-first--2026-10-06).
-
 ## Next
 
 - [ ] **Adopt the reviewed skill locally and revisit the video campaign** — apply the accepted audience/message guidance before further campaign revisions.
@@ -36,5 +32,6 @@ no specific next package or delivery date is committed. Only Voxplainer is curre
 
 ## Recently completed
 
+- [x] **Publish the VSL skill** — merged 2026-10-06 in [PR #6](https://github.com/saliftankoano/roogo-skills/pull/6); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Make the published skill understandable to human repository visitors** — merged 2026-09-09 in [PR #2](https://github.com/saliftankoano/roogo-skills/pull/2); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Publish the improved Voxplainer package and validation** — merged 2026-09-09 in [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1); recorded in [CHANGELOG.md](CHANGELOG.md).

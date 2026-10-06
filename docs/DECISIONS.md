@@ -20,7 +20,7 @@ pair was highlighted as spoken.
 layout); shipping sound effects, logo, fonts or music (licenses not recorded);
 using the stores' official badge artwork (not redistributed here).
 
-**Status:** Pending review in the delivery pull request.
+**Status:** Settled; verified merged to `main` in [PR #6](https://github.com/saliftankoano/roogo-skills/pull/6). Later rule added the same day: choose photos separately for each format.
 
 ### Publish the POV listing walkthrough as its own package — 2026-09-28
 
