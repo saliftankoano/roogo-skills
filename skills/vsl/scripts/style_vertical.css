@@ -1,0 +1,40 @@
+@font-face{font-family:"Nunito";src:url("assets/Nunito-ExtraBold.ttf");font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000;font-family:"Nunito",sans-serif;font-weight:800}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden}
+.scene{position:absolute;inset:0;overflow:hidden}
+.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cream{background:#f5efe6;color:#17120f}.dark{background:#17120f;color:#fff}.white{background:#fff;color:#17120f}
+.shot{position:absolute;inset:0;opacity:0}
+.bgb{filter:blur(40px) brightness(.55);transform:scale(1.25)}
+.fg{object-fit:contain}
+.kick{position:absolute;top:210px;width:100%;text-align:center;font-size:32px;color:#c96a2e}
+h2{position:absolute;top:265px;left:60px;width:960px;text-align:center;font-size:56px;line-height:66px}
+h2.w{top:230px;font-size:58px}
+.frame{position:absolute;left:90px;top:350px;width:900px;height:500px;border-radius:36px;overflow:hidden;background:#000}
+.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.grid{position:absolute;left:90px;top:880px;width:900px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.step{background:#fff;border:3px solid #e1d7c8;border-radius:32px;padding:22px 26px;height:240px}
+.num{width:60px;height:60px;border-radius:50%;background:#c96a2e;color:#fff;font-size:40px;text-align:center;line-height:60px}
+.step h3{margin-top:18px;font-size:38px}.step p{margin-top:8px;font-size:27px;color:#5a2d0c}
+.pgrid{position:absolute;left:90px;top:400px;width:900px;display:flex;flex-direction:column;gap:26px}
+.pc{height:330px;border-radius:36px;border:4px solid #c96a2e;background:#281f1b;text-align:center;padding:24px 30px}
+.pc.g{border-color:#2e8b57}.pc .big{font-size:116px;line-height:124px;color:#c96a2e}.pc.g .big{color:#2e8b57}
+.pc .mid{margin-top:6px;font-size:40px}.pc .small{margin-top:14px;font-size:29px;color:#c8beb4;line-height:36px}
+.kgrid{position:absolute;left:90px;top:520px;width:900px;display:flex;flex-direction:column;gap:30px}
+.pk{height:230px;background:#fff;border:3px solid #e1d7c8;border-radius:36px;text-align:center;padding-top:36px}
+.pk.hl{border:4px solid #c96a2e}.pn{font-size:52px}.pp{margin-top:20px;font-size:62px;color:#c96a2e}
+.elogo{position:absolute;left:410px;top:380px;height:200px}
+#sc8 h2{top:640px;font-size:56px}
+.avail{position:absolute;top:832px;width:100%;text-align:center;font-size:32px;color:#5a2d0c}
+.badges{position:absolute;top:890px;left:0;width:100%;display:flex;justify-content:center;gap:20px}
+.sb{display:flex;align-items:center;gap:16px;background:#000;border-radius:24px;padding:0 26px;height:116px;width:440px}
+.sb img{width:56px;height:56px}.sb small{display:block;font-size:22px;color:#ddd;font-weight:800}.sb b{display:block;font-size:40px;color:#fff;font-weight:800;line-height:44px}
+.btn{position:absolute;left:190px;top:1090px;width:700px;height:104px;border-radius:52px;background:#c96a2e;color:#fff;font-size:58px;text-align:center;line-height:104px}
+.wa{position:absolute;top:1250px;width:100%;text-align:center;font-size:54px;color:#5a2d0c}
+.pr{display:inline-block;font-weight:800;color:#5a2d0c;transform-origin:center bottom}
+#badge{position:absolute;left:910px;top:80px;width:116px;height:116px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
+#badge img{height:84px}
+.cap{position:absolute;left:0;top:1450px;width:1080px;text-align:center;font-size:60px;line-height:76px;white-space:nowrap}
+.cap span{display:inline-block;margin:0 9px;color:#fff;-webkit-text-stroke:11px #000;paint-order:stroke fill}
+.cap span.on{color:#ff8514}

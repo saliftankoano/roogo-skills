@@ -68,6 +68,21 @@ even when the layout looks polished. Decorative motion does not replace explanat
 
 **Evidence:** [Build from story to frames](../skills/voxplainer/SKILL.md#build-from-story-to-frames).
 
+### VSL (video sales letter)
+
+**Meaning:** A video that does the selling: a promise, the pains the viewer
+recognizes, how it works, objections answered, then one ask. It delivers the same
+pitch every time. In Roogo, a 16:9 cut for the website and a 9:16 cut for social.
+
+**Origin:** Direct-response marketing; defined for Roogo from the owner VSL built
+on 2026-10-05 and 2026-10-06.
+
+**Why it matters for building:** It is a persuasion format, not a feature
+explainer (`video-avantage`) or a listing video (`visite-pov`). Fee wording and
+claims must come from confirmed sources.
+
+**Evidence:** [VSL package](../skills/vsl/SKILL.md).
+
 ### Interface proof and capture freshness
 
 **Meaning:** A real captured product state supports only the claim it visibly

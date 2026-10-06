@@ -19,6 +19,10 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
   - Done when: the three packages, the catalog entries, the logbook updates, and the helper tests are validated and merged to `main`.
   - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md).
 
+- [ ] **Publish the VSL skill** — package the owner VSL method as a self-contained, public-safe skill with a human guide.
+  - Done when: package validation and tests pass and the pull request is merged to `main`.
+  - Delivery branch: `feat/vsl-skill`. [Decision](DECISIONS.md#publish-the-vsl-as-its-own-package-real-assets-first--2026-10-06).
+
 ## Next
 
 - [ ] **Adopt the reviewed skill locally and revisit the video campaign** — apply the accepted audience/message guidance before further campaign revisions.

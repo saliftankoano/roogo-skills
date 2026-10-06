@@ -4,6 +4,24 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Publish the VSL as its own package, real assets first — 2026-10-06
+
+**Decision:** Add `vsl` for sales videos (website 16:9, social 9:16) built in
+HyperFrames with real listing photos, a few generated shots for people, Sandrine,
+house captions and a staggered store-badge outro.
+
+**Why:** The format was iterated with the founder: ffmpeg zoom shook on stills,
+long single shots felt static, generated photos were used where real listing
+photos existed, some sound effects (gate creak, key jingle, motorbike engine, a
+loud phone buzz) were annoying, and the phone number was easier to read when each
+pair was highlighted as spoken.
+
+**Ruled out / alternatives:** Cropping the horizontal video for vertical (weaker
+layout); shipping sound effects, logo, fonts or music (licenses not recorded);
+using the stores' official badge artwork (not redistributed here).
+
+**Status:** Pending review in the delivery pull request.
+
 ### Publish the POV listing walkthrough as its own package — 2026-09-28
 
 **Decision:** Add `visite-pov` for live listings that only have photos: camera
