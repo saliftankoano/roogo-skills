@@ -4,6 +4,28 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Staff training videos get their own standalone skill that improves itself — 2026-10-14
+
+**Decision:** Add `formation-equipe` for Roogo staff training videos: real
+production captures from the user's signed-in browser, a cleaned cloned-voice
+narration, slow camera moves, script-spelled captions, a credited music bed and
+automated checks. The skill stands on its own and must end every run with
+improvement candidates, each naming the gap it closes and the evidence from that
+run; accepted candidates reach the skill only through a pull request here.
+
+**Why:** The staff videos made in October 2026 were good, but the method lived
+in a general product-demo skill owned by another organization, which cannot be
+published here, and the Roogo lessons (voice cleaning, capture hygiene, music
+behaviour) lived only in one project folder. Salif wants clearly separated skills
+per job and a skill that gets better with each run.
+
+**Ruled out / alternatives:** Copying the general product-demo skill (not ours to
+publish); a Roogo skill that delegates to it (Salif wants each job defined by its
+own skill); optional retrospectives (they get skipped, so the step is mandatory,
+and "no candidate" must be justified with evidence).
+
+**Status:** Proposed in PR; not yet merged.
+
 ### Publish the VSL as its own package, real assets first — 2026-10-06
 
 **Decision:** Add `vsl` for sales videos (website 16:9, social 9:16) built in

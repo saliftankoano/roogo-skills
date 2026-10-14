@@ -7,6 +7,10 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 
 ## Now
 
+- [ ] **Publish the staff training video skill** — add `formation-equipe`, standalone, with the mandatory improvement-candidate step.
+  - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
+  - Delivery branch: `feat/formation-equipe`. [Decision](DECISIONS.md).
+
 - [ ] **Publish Salif's language-specific Cartesia choices** — keep his French and English voices discoverable in all three narrated packages without changing narrator defaults.
   - Done when: package validation passes and the voice configuration is merged to `main`.
   - Delivery branch: `feat/roogo-video-skills`. [Decision](DECISIONS.md#name-salifs-reusable-cartesia-voices-by-language--2026-09-09).

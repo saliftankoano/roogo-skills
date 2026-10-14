@@ -1,0 +1,24 @@
+{
+  "captures": "captures",
+  "script": "script_FR.md",
+  "words": "audio/narration-clean.words.json",
+  "narration": "audio/narration-clean.wav",
+  "font_title": "assets/Nunito-Bold.ttf",
+  "font_text": "assets/Urbanist.ttf",
+  "logo": "assets/logo.png",
+  "out": "processed/silent.mp4",
+  "capture_width": 2812,
+  "intro": {"title": "Studio de contenu : les nouveautés", "subtitle": "De l'annonce à la vidéo, pas à pas"},
+  "outro": {
+    "title": "À vous de jouer",
+    "subtitle": "Un bien, un projet · Le prix avant chaque clic",
+    "credit": ["Musique : Carefree · Kevin MacLeod (incompetech.com)", "CC BY 4.0 · creativecommons.org/licenses/by/4.0/ · extrait mixé"]
+  },
+  "shots": [
+    [1.8, "s01-home", [0.5, 0.52, 1.05]],
+    [5.8, "s01-home", [0.15, 0.3, 1.7]],
+    [7.0, "s02-nouveau-menu", [0.2, 0.4, 1.7]],
+    [10.6, "s03-new-project", [0.5, 0.5, 1.1]],
+    [14.0, "s04-project", [0.45, 0.42, 1.6]]
+  ]
+}

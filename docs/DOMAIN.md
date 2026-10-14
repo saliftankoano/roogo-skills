@@ -185,3 +185,17 @@ spelling all change how a voice sounds while every automated check still passes.
 Guessing and rebuilding the whole video around the guess is the expensive failure.
 
 **Evidence:** [Narration and character voice](../skills/video-avantage/references/narration-and-voice.md).
+
+### Improvement candidate
+
+**Meaning:** A proposed change to a skill, reported at the end of a run, that
+names the gap it closes, the evidence from that run, the exact edit and target
+file, the expected effect and a confidence level.
+
+**Origin:** Salif's requirement when `formation-equipe` was created, 2026-10-14.
+
+**Why it matters for building:** A skill only improves if each run reports what
+it got wrong with proof. Candidates without evidence are noise; accepted ones go
+through a pull request, never into an installed copy.
+
+**Evidence:** [Improvement protocol](../skills/formation-equipe/references/ameliorations.md).

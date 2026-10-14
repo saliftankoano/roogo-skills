@@ -1,0 +1,4 @@
+interface:
+  display_name: "Formation équipe"
+  short_description: "Make a staff training video of a Roogo feature"
+  default_prompt: "Use $formation-equipe to make a French training video that shows the Roogo team how to use the Studio de contenu, then list improvement candidates for the skill."
