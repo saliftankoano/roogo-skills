@@ -4,6 +4,22 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Agents clean up after themselves into one folder per conversation — 2026-10-14
+
+**Decision:** Add `nettoyage`. Agents trace what they create, then sort it at
+the end: the final output is copied to `final/` and what is needed for later
+changes goes to `a-reprendre/`, both in one folder per conversation under
+`~/Downloads/Agent/`, with a `LISEZMOI.md` index. Everything else goes to the
+system Trash, and processes and tabs the agent opened are closed.
+
+**Why:** Long tasks leave test renders, caches, running servers, tabs and stray
+branches behind. Salif wants no residue, one place per conversation, and a copy
+of the final output in that place even when it is also delivered elsewhere.
+
+**Ruled out / alternatives:** Permanent deletion (not recoverable); cleaning
+anything the agent did not create; removing records outside the machine
+without asking; a dated-first folder name (the house rule names by subject,
+date last).
 ### Staff training videos get their own standalone skill that improves itself — 2026-10-14
 
 **Decision:** Add `formation-equipe` for Roogo staff training videos: real

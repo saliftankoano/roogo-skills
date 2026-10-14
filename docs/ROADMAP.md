@@ -7,6 +7,9 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 
 ## Now
 
+- [ ] **Publish the cleanup skill** — add `nettoyage`: trace, sort into one Downloads folder per conversation, Trash the rest.
+  - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
+  - Delivery branch: `feat/nettoyage`. [Decision](DECISIONS.md).
 - [ ] **Publish the staff training video skill** — add `formation-equipe`, standalone, with the mandatory improvement-candidate step.
   - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
   - Delivery branch: `feat/formation-equipe`. [Decision](DECISIONS.md).

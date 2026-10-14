@@ -186,6 +186,20 @@ Guessing and rebuilding the whole video around the guess is the expensive failur
 
 **Evidence:** [Narration and character voice](../skills/video-avantage/references/narration-and-voice.md).
 
+### Conversation folder
+
+**Meaning:** The one folder a conversation's work ends up in, by default
+`~/Downloads/Agent/<Sujet> <date>/`: `final/` holds a copy of the final output,
+`a-reprendre/` what is needed to change it later, `LISEZMOI.md` the index.
+Everything else the agent created is residue and goes to the Trash.
+
+**Origin:** Salif's request when `nettoyage` was created, 2026-10-14.
+
+**Why it matters for building:** A later conversation resumes from this folder
+instead of from crumbs scattered across scratch, repositories and Downloads.
+
+**Evidence:** [Cleanup skill](../skills/nettoyage/SKILL.md).
+
 ### Improvement candidate
 
 **Meaning:** A proposed change to a skill, reported at the end of a run, that
