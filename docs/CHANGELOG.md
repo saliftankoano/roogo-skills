@@ -5,6 +5,10 @@ the application's release history. See [DECISIONS.md](DECISIONS.md) for why,
 [SYSTEM.md](SYSTEM.md) for how, [DOMAIN.md](DOMAIN.md) for terms, and
 [ROADMAP.md](ROADMAP.md) for unfinished work.
 
+## 2026-10-14
+
+- Published `formation-equipe`, the staff training video skill: production captures from a signed-in browser over CDP, Cartesia narration with word timestamps, cloned-voice noise reduction, camera moves with script-spelled captions, a ducked credited music bed and still-frame, loudness and length checks; every run ends with improvement candidates tied to a gap and evidence — verified merged in [PR #8](https://github.com/saliftankoano/roogo-skills/pull/8).
+
 ## 2026-10-06
 
 - Published `vsl`, the video sales letter skill: promise, pains, mechanism, objections and one ask, built in HyperFrames from real listing photos matched to each format (landscape for 16:9, portrait for 9:16), a Sandrine narrator, house captions, quiet sound effects and a staggered store-badge outro, with a human guide that explains what a VSL is — verified merged in [PR #6](https://github.com/saliftankoano/roogo-skills/pull/6).

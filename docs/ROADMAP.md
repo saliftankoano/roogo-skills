@@ -10,9 +10,6 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 - [ ] **Publish the cleanup skill** — add `nettoyage`: trace, sort into one Downloads folder per conversation, Trash the rest.
   - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
   - Delivery branch: `feat/nettoyage`. [Decision](DECISIONS.md).
-- [ ] **Publish the staff training video skill** — add `formation-equipe`, standalone, with the mandatory improvement-candidate step.
-  - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
-  - Delivery branch: `feat/formation-equipe`. [Decision](DECISIONS.md).
 
 - [ ] **Publish Salif's language-specific Cartesia choices** — keep his French and English voices discoverable in all three narrated packages without changing narrator defaults.
   - Done when: package validation passes and the voice configuration is merged to `main`.
@@ -39,6 +36,7 @@ no specific next package or delivery date is committed. Only Voxplainer is curre
 
 ## Recently completed
 
+- [x] **Publish the staff training video skill** — merged 2026-10-14 in [PR #8](https://github.com/saliftankoano/roogo-skills/pull/8); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Publish the VSL skill** — merged 2026-10-06 in [PR #6](https://github.com/saliftankoano/roogo-skills/pull/6); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Make the published skill understandable to human repository visitors** — merged 2026-09-09 in [PR #2](https://github.com/saliftankoano/roogo-skills/pull/2); recorded in [CHANGELOG.md](CHANGELOG.md).
 - [x] **Publish the improved Voxplainer package and validation** — merged 2026-09-09 in [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1); recorded in [CHANGELOG.md](CHANGELOG.md).

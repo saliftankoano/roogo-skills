@@ -40,7 +40,7 @@ publish); a Roogo skill that delegates to it (Salif wants each job defined by it
 own skill); optional retrospectives (they get skipped, so the step is mandatory,
 and "no candidate" must be justified with evidence).
 
-**Status:** Proposed in PR; not yet merged.
+**Status:** Settled; verified merged to `main` in [PR #8](https://github.com/saliftankoano/roogo-skills/pull/8).
 
 ### Publish the VSL as its own package, real assets first — 2026-10-06
 
