@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nettoyage"
+  short_description: "Clean up after a task and keep one tidy folder"
+  default_prompt: "Use $nettoyage to clean up everything this task created, keep the final output and anything needed for later changes in one Downloads folder, and report what was removed."

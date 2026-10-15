@@ -57,6 +57,12 @@ buyer demand calling owners in is `appel-proprietaires`; a feature or benefit wi
 photography to build from is `video-avantage`; an existing celebration graphic to
 animate is `milestone`; a live listing with only photos is `visite-pov`; a sales pitch that persuades on the website and social is `vsl`; a training video for Roogo staff is `formation-equipe`.
 
+## Working habits
+
+- [Nettoyage — human guide](skills/nettoyage/README.md) — the agent cleans up
+  after itself: final output and what is needed for later changes go into one
+  Downloads folder per conversation, everything else goes to the Trash.
+
 ## Quick start
 
 Copy the package directory you want, for example `skills/voxplainer`, into your
