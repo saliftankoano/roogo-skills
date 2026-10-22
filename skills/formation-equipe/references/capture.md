@@ -33,6 +33,20 @@
 - Reset per-browser settings the app stores locally (volumes, toggles) before
   filming, so the video shows the defaults staff will see.
 
+## Public pages on a phone
+
+For pages anyone sees without signing in (careers, a listing, a public form),
+film what a candidate or visitor sees on an Android phone:
+
+- Run the template with `PUBLIC=1`: a fresh, signed-out browser context, never
+  the owner's signed-in Chrome, so no session, staff menu or saved data shows.
+- 390x844 CSS pixels at scale 3 (captures 1170x2532), French locale, touch on.
+- Build a 1080x1920 video with `capture_width` 1170 in the plan. Keep zoom at
+  1.15 or less: the phone site has 16 px side margins, and a closer zoom cuts
+  text at the edges. Zoom further only on a single button.
+- Fill a form up to its last step, film every step, then submit once. Each
+  extra submission leaves more test data behind.
+
 ## Steps
 
 Write one function per script paragraph, each saving numbered captures
@@ -40,5 +54,10 @@ Write one function per script paragraph, each saving numbered captures
 broken step does not mean re-filming everything. Capture the loading and empty
 states when the script mentions them.
 
-Anything the agent creates while filming (test projects, uploads, generated
-items) is listed at delivery so the user can decide whether to delete it.
+## Test data created while filming
+
+Record every row, upload, message or generated item a step creates with
+`created(what, where, id)` in the template; it lands in `created.jsonl` next to
+the captures. The delivery report lists each one with where it lives (table,
+storage bucket, inbox) and how to find it, so the owner can decide what to
+delete. The agent never deletes production data on its own.

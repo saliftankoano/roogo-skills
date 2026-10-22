@@ -26,16 +26,35 @@ def load_words(path):
     return out
 
 
+OPENING = ("«", "“", "(")   # punctuation that belongs to the word after it
+NBSP = "\u00a0"              # joins a quote mark to its word, so captions never wrap between them
+CLOSING = "»”) " + NBSP
+
+
 def script_words(text):
+    """Script words in reading order, each punctuation-only token kept with its word.
+
+    An opening « (or “, ( ) goes with the next word; closing », colons, question
+    and exclamation marks go with the word before. Each item holds exactly one
+    spoken word, so timing is unchanged.
+    """
     body = "\n".join(l for l in text.splitlines() if not l.startswith("#"))
     body = re.sub(r"^\d+b?\.\s*", "", body, flags=re.M)
-    clean = []
-    for t in body.split():
-        if not norm(t) and clean:
-            clean[-1] += " " + t          # keep ":" "?" with the word before
+    clean, carry = [], ""
+    for t in body.split():               # also splits on non-breaking spaces
+        if not norm(t) and t.startswith(OPENING):
+            carry += t + NBSP
+        elif not norm(t) and clean:
+            clean[-1] += NBSP + t        # keep » : ? ! with the word before
         else:
-            clean.append(t)
+            clean.append(carry + t); carry = ""
+    if carry and clean:
+        clean[-1] += NBSP + carry.rstrip(NBSP)
     return clean
+
+
+def ends_sentence(word):
+    return word.rstrip(CLOSING)[-1:] in (".", "?", "!", "…")
 
 
 def aligned(text, words):
@@ -62,7 +81,7 @@ def phrases(text, words, max_seconds=2.7, max_chars=60):
     sentences, cur = [], []
     for x in aligned(text, words):
         cur.append(x)
-        if x[0][-1] in ".?!":
+        if ends_sentence(x[0]):
             sentences.append(cur); cur = []
     if cur:
         sentences.append(cur)

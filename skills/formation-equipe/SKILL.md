@@ -48,19 +48,28 @@ short.
    words for the voice.
 3. **Capture.** Drive the user's own signed-in browser over the DevTools
    protocol, in a dedicated tab, at 1600x825 CSS pixels and 2x scale. The user
-   signs in; the agent never types credentials. Hide private details before
-   every shot. Follow [references/capture.md](references/capture.md) and start
-   from [scripts/capture.example.mjs](scripts/capture.example.mjs).
+   signs in; the agent never types credentials. Public pages for visitors are
+   filmed signed out at phone size (`PUBLIC=1`, 390x844 at 3x), never in the
+   user's browser. Hide private details before every shot. Record every test
+   row and upload a step creates. Follow
+   [references/capture.md](references/capture.md) and start from
+   [scripts/capture.example.mjs](scripts/capture.example.mjs).
 4. **Narration.** `scripts/narration.py` reads the approved script with the
-   chosen voice, then writes word timestamps. Listen to a short sample before
-   the full read when the voice or a spelling is new.
+   chosen voice, a pause between paragraphs (`--pause`, default 0.9 s) and a
+   slower speed for clones (`--speed`, default 0.9), then writes word
+   timestamps and prints the pace: aim for 130 to 160 words a minute. Listen
+   to a short sample before the full read when the voice or a spelling is new.
 5. **Clean the voice.** Cloned voices carry hiss and low rumble.
    `scripts/nettoyer_voix.py` reduces it and prints the speech-to-background
-   gap before and after. Use the cleaned file only if the gap improved and the
+   gap before and after; silent pauses are ignored. Measure every take: under
+   18 dB, record again. Use the cleaned file only if the gap improved and the
    voice still sounds natural.
 6. **Build.** Write the shot list (time in the narration, capture, framing) in
    a copy of [scripts/montage.example.json](scripts/montage.example.json), then
-   run `scripts/montage.py`. Camera moves, cards and captions follow
+   run `scripts/montage.py`. The plan sets the size (1920x1080 or 1080x1920);
+   captions sit toward the centre in a dark box and the Roogo badge is top
+   right on every screen shot, never on the cards. Camera moves, cards and
+   captions follow
    [references/montage-et-verification.md](references/montage-et-verification.md).
    Then `scripts/mixer.py` lays the music under the narration.
 7. **Verify.** `scripts/verifier.py` on the final file: no still image longer
@@ -72,6 +81,8 @@ short.
    saved where the team keeps training videos (Roogo: the vault, under
    `06 Product and technology/Videos/`). Keep the previous version under a
    dated name instead of overwriting it. Offer a lighter copy for WhatsApp.
+   List every test row and uploaded file created while filming, with where it
+   lives, for the user to keep or delete.
 9. **Improve this skill.** Mandatory, every run, even a short one. Follow
    [references/ameliorations.md](references/ameliorations.md): bring
    improvement candidates, each with the gap it closes and the evidence from
@@ -88,11 +99,12 @@ short.
   shipped.
 - Light Roogo look: cream background, dark brown text, orange accent. Logo and
   fonts are supplied by the user; none are shipped.
+- Size: 1920x1080 for the desktop app, 1080x1920 for public pages on a phone.
 - No em dashes and no emoji in on-screen text or captions.
 
 ## Requirements
 
 Node with Playwright (capture), Python 3 with Pillow, numpy, soundfile and
 noisereduce, ffmpeg and ffprobe. A Cartesia key in `CARTESIA_API_KEY` or the
-macOS Keychain item `ai.cartesia.api-key`; a fal key in `FAL_KEY` or the
+macOS Keychain item `ai.cartesia.api-key` (account `default` or none); a fal key in `FAL_KEY` or the
 Keychain item `roogo-content-key` for word timestamps. Never print keys.
