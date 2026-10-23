@@ -7,12 +7,24 @@
   "font_text": "assets/Urbanist.ttf",
   "logo": "assets/logo.png",
   "out": "processed/silent.mp4",
+  "size": [1920, 1080],
+  "fps": 30,
+  "caption_y": 0.72,
+  "caption_size": 44,
+  "caption_max_chars": 60,
+  "badge": true,
   "capture_width": 2812,
-  "intro": {"title": "Studio de contenu : les nouveautés", "subtitle": "De l'annonce à la vidéo, pas à pas"},
+  "intro": {
+    "title": "Studio de contenu : les nouveautés",
+    "subtitle": "De l'annonce à la vidéo, pas à pas"
+  },
   "outro": {
     "title": "À vous de jouer",
-    "subtitle": "Un bien, un projet · Le prix avant chaque clic",
-    "credit": ["Musique : Carefree · Kevin MacLeod (incompetech.com)", "CC BY 4.0 · creativecommons.org/licenses/by/4.0/ · extrait mixé"]
+    "subtitle": "Un bien, un projet\nLe prix avant chaque clic",
+    "credit": [
+      "Musique : Carefree · Kevin MacLeod (incompetech.com)",
+      "CC BY 4.0 · creativecommons.org/licenses/by/4.0/ · extrait mixé"
+    ]
   },
   "shots": [
     [1.8, "s01-home", [0.5, 0.52, 1.05]],

@@ -4,6 +4,30 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Training videos meet the house rules by default — 2026-10-22
+
+**Decision:** `formation-equipe` editing now defaults to the house rules: the
+capture fills the frame (1920x1080 or 1080x1920, set in the plan), captions sit
+toward the centre in a dark brown box with cream text, and the Roogo badge is
+drawn top right on screen shots and never on the title and closing cards. The
+badge image is a plan setting (`badge_logo`, defaulting to the card logo) and
+the badge is drawn inside the skill. Clones default to speed 0.9; every voice
+gets a 0.9 s pause between paragraphs. Voice cleaning ignores digital silence
+and copies a file with nothing audible between words as "already clean".
+
+**Why:** The 22 October 2026 run needed a 150-line wrapper to get a compliant
+vertical video, cream captions were unreadable on cream screens, the clone read
+185 words a minute, and the pauses then crashed the cleaning step. See the
+[PRDs](prd/formation-equipe-improvements-2026-10.md).
+
+**Ruled out / alternatives:** Keeping the former bottom caption band as the
+default for old plans (PRD 4.6): it breaks the house rule for every plan reused
+without the new settings, so the old look is opt-in only (`caption_layout:
+"band"`, `badge: false`, verified pixel-identical). Importing the badge helper
+from `video-avantage` (keeps each skill self-contained). A shared config file
+for the badge (one more file to set up for a single path). Speed 0.9 for the
+house voice (not judged by ear yet; PRD 2 open question).
+
 ### Agents clean up after themselves into one folder per conversation — 2026-10-14
 
 **Decision:** Add `nettoyage`. Agents trace what they create, then sort it at
