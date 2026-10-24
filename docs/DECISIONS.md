@@ -198,3 +198,19 @@ depending on private machine paths, or treating voice IDs as usage permission.
 
 **Status:** Settled; enforced by package conventions, review, and validation in
 [PR #1](https://github.com/saliftankoano/roogo-skills/pull/1).
+
+### One PRD per ask — 2026-10-24
+
+**Decision:** The `good-prd` skill writes one atomic PRD per ask: each answers
+"what are we doing?" with one thing, and a multi-ask request becomes several
+cross-linked PRDs. Every PRD starts from cited evidence and stays a draft until
+the approver says yes.
+
+**Why:** Requested by the Roogo founder on 2026-10-24 after a single request held
+six separate changes; one combined document mixes decisions that are approved,
+rejected or shipped on different timelines.
+
+**Ruled out / alternatives:** One document holding several PRDs (the earlier
+habit), or PRDs written from the request alone without reading the product.
+
+**Status:** Proposed in the `feat/good-prd` pull request.

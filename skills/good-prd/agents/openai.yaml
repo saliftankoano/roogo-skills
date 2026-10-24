@@ -1,0 +1,4 @@
+interface:
+  display_name: "Good PRD"
+  short_description: "Atomic, evidence-backed PRDs, one per ask"
+  default_prompt: "Use $good-prd to turn this request into PRDs: split it into one PRD per ask, gather evidence from the code and data first, and save each PRD as a draft for approval."
