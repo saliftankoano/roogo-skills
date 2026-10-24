@@ -45,6 +45,9 @@ Each skill belongs in `skills/<skill-name>/` and must contain a `SKILL.md`. A sk
 - [Formation équipe — human guide](skills/formation-equipe/README.md) — staff
   training videos of a Roogo app feature from real captures, a cleaned narration
   and captions; every run ends with evidence-backed improvements for the skill.
+- [Good PRD — human guide](skills/good-prd/README.md) — product requirements
+  documents, one per ask, grounded in evidence from the code and data, with
+  testable requirements, metrics and guardrails, kept as drafts until approved.
 
 A skill is a set of instructions and supporting resources for an agent, not a
 standalone video app. Start with each human guide for installation, requirements,
