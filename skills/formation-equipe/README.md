@@ -39,7 +39,11 @@ real screens, explained step by step in French.
 ## Setup
 
 - Node with Playwright; Python 3 with Pillow, numpy, soundfile, noisereduce;
-  ffmpeg.
+  ffmpeg. If noisereduce is missing, a virtual environment in the working
+  folder is enough: `python3 -m venv .venv && .venv/bin/pip install
+  noisereduce soundfile numpy Pillow`.
+- Keep the installed skill in step with this repository: an old copy brings
+  back fixed bugs.
 - Cartesia key (`CARTESIA_API_KEY` or Keychain item `ai.cartesia.api-key`,
   with or without an account name) and fal key (`FAL_KEY` or Keychain item
   `roogo-content-key`). Keys are never printed.

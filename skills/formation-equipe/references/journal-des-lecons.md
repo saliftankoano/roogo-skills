@@ -4,6 +4,12 @@ One line per accepted improvement: date, lesson, evidence. Newest first. The
 rules themselves live in the skill files; this journal says where each came
 from.
 
+- 2026-10-30: Compare the installed copy with the repository before a run: the installed copy dated from 2026-10-14 and the Keychain bug fixed on 2026-10-22 failed three times again ("Missing key").
+- 2026-10-30: Stop on a sign-in page before every shot: an expired session filmed the Clerk sign-in page as the first capture, with no error.
+- 2026-10-30: Roogo's own numbers stay visible: hiding every phone number blurred the whole Studio script, which ends with Roogo's WhatsApp.
+- 2026-10-30: Re-read example records right before filming: a listing was published by staff between the script and the shoot, and the publish window had to be filmed on a test listing.
+- 2026-10-30: Per-video respellings go on the command line (`--respell`): "CNIB" had to be read "C N I B", which took two copies of the script.
+- 2026-10-30: Give the virtual environment command for noisereduce: the system Python lacked it (ModuleNotFoundError).
 - 2026-10-22: Keychain lookup puts the service right after `-s`; the account is optional. Evidence: every run failed with "Missing key" and needed a manual export of the key.
 - 2026-10-22: Slow clones to speed 0.9 with 0.9 s pauses between paragraphs: Salif's clone read 185 words a minute; the same 138 words took 52.8 s instead of 44.7 s. The previous video had been rejected as too fast.
 - 2026-10-22: Leave digital silence out of the noise profile: with pauses, 12% of frames were pure silence and cleaning crashed (zero-size array). A clone's background varied from 14.5 to 31.7 dB between takes, so every take is measured.

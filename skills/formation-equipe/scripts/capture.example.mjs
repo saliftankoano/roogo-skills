@@ -12,6 +12,8 @@ const OUT = process.env.CAPTURE_DIR ?? "captures";
 const PORT = process.env.CDP_PORT ?? "9333";
 const PUBLIC = process.env.PUBLIC === "1";
 const START = process.env.START_URL ?? (PUBLIC ? "https://www.roogobf.com/" : "https://www.roogobf.com/admin/studio");
+// Roogo's own public numbers stay visible; every other phone number is hidden.
+const ROOGO_NUMBERS = ["+226 67 00 61 16"];
 const VIEW = PUBLIC ? { width: 390, height: 844 } : { width: 1600, height: 825 };
 mkdirSync(OUT, { recursive: true });
 
@@ -54,12 +56,28 @@ const created = (what, where, id) => {
 const wait = (ms) => page.waitForTimeout(ms);
 const top = () => page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
 
-// Before every shot: hide dev badges, the signed-in email, and fixed bars covering scrolled content.
+// Stop before filming a sign-in page: an expired session otherwise saves it without any error.
+// Public captures are signed out on purpose and skip this check.
+const assertSignedIn = async () => {
+  if (PUBLIC) return;
+  const url = page.url();
+  const signIn = /\/\/accounts\.|\/sign-in/.test(url)
+    || (await page.getByText(/^(Sign in|Se connecter)$/).first().isVisible().catch(() => false));
+  if (signIn) throw new Error(`not signed in (${url}): ask the user to sign in, then rerun this step`);
+};
+
+// Before every shot: hide dev badges, the signed-in email, other people's phone numbers,
+// and fixed bars covering scrolled content.
 const hidePrivate = async () => {
   await page.addStyleTag({ content: "nextjs-portal{display:none!important}" }).catch(() => {});
-  await page.evaluate(() => {
+  await page.evaluate((allowed) => {
+    const digits = (t) => t.replace(/\D/g, "");
+    const own = allowed.map(digits);
     for (const el of document.querySelectorAll("header *, nav *")) {
-      if (el.childElementCount === 0 && /@|\+?\d[\d ]{7,}/.test(el.textContent ?? "")) el.style.visibility = "hidden";
+      if (el.childElementCount !== 0) continue;
+      let text = el.textContent ?? "";
+      for (const m of text.match(/\+?\d[\d ]{7,}/g) ?? []) if (own.some((n) => digits(m).endsWith(n.slice(-8)))) text = text.replace(m, "");
+      if (/@|\+?\d[\d ]{7,}/.test(text)) el.style.visibility = "hidden";
     }
     for (const el of document.querySelectorAll("body *")) {
       const s = getComputedStyle(el);
@@ -67,10 +85,11 @@ const hidePrivate = async () => {
         el.style.visibility = window.scrollY > 60 ? "hidden" : "";
       }
     }
-  }).catch(() => {});
+  }, ROOGO_NUMBERS).catch(() => {});
 };
 
 const shot = async (name) => {
+  await assertSignedIn();
   await hidePrivate();
   await page.mouse.move(VIEW.width - 5, VIEW.height - 5); // park the cursor so no hover state is captured
   await wait(400);
