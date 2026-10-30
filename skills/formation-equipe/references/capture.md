@@ -12,6 +12,9 @@
   touched. Reuse it across runs.
 - Call `page.bringToFront()` before capturing. A background tab does not paint
   and screenshots time out.
+- The template checks before every shot that the page is not a sign-in page
+  and stops with an error if it is. A session that expired mid-run otherwise
+  films the sign-in page without complaint.
 
 ## Frame
 
@@ -25,11 +28,17 @@
 ## Privacy and hygiene, before every shot
 
 - Hide the signed-in email and any personal phone number or name in the
-  navigation bar.
+  navigation bar. Roogo's own public numbers (`ROOGO_NUMBERS` in the template)
+  stay visible: hiding them blurs whole scripts and footers that are meant to
+  be read.
 - Hide development badges.
 - When scrolled, hide fixed bars that cover the content.
 - Pick test, public or staff-owned listings. Never show a customer's personal
   data, payment details or private messages.
+- Re-read the status of every example record right before filming, not only
+  when writing the script: staff keep working in production. For a step that
+  changes state (publish, approve), prefer a test listing, and cancel instead
+  of confirming.
 - Reset per-browser settings the app stores locally (volumes, toggles) before
   filming, so the video shows the defaults staff will see.
 

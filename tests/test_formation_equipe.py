@@ -61,6 +61,12 @@ class FormationEquipePackageTests(unittest.TestCase):
     def test_skill_does_not_delegate_to_another_video_skill(self):
         self.assertNotIn("product-video", (ROOT / "SKILL.md").read_text(encoding="utf-8"))
 
+    def test_capture_template_stops_on_sign_in_and_keeps_roogo_numbers(self):
+        js = (SCRIPTS / "capture.example.mjs").read_text(encoding="utf-8")
+        self.assertIn("await assertSignedIn();\n  await hidePrivate();", js)
+        self.assertIn("if (PUBLIC) return;", js)
+        self.assertIn("const ROOGO_NUMBERS = [", js)
+
     def test_example_plan_is_complete(self):
         plan = json.loads((SCRIPTS / "montage.example.json").read_text(encoding="utf-8"))
         for key in ("captures", "script", "words", "narration", "font_title", "font_text", "logo", "out", "intro", "outro", "shots",
@@ -223,6 +229,16 @@ class NarrationPaceTests(unittest.TestCase):
         self.assertEqual([w["s"] for w in saved], [0.2, 0.6, 1.9, 2.3, 2.6, 3.9])
         self.assertIn("2 pauses", log)
         self.assertNotIn("WARNING", log)
+
+    def test_respell_for_one_video_changes_the_voice_text_only(self):
+        self.script.write_text("# Titre\n\n1. Ajoutez la CNIB.\n", encoding="utf-8")
+        body = self.run_main("--respell", "CNIB=C N I B", "--respell", "Ajoutez=Ajoutez")[0][0][1]
+        self.assertEqual(body["transcript"], "Ajoutez la C N I B.")
+        self.assertIn("CNIB", self.script.read_text(encoding="utf-8"))
+
+    def test_respell_without_equals_is_refused(self):
+        with self.assertRaises(SystemExit), redirect_stderr(io.StringIO()):
+            self.run_main("--respell", "CNIB")
 
     def test_pace_flags_bad_timestamps_and_measures_words_a_minute(self):
         ws = [{"w": "a", "s": i * 0.4, "e": i * 0.4 + 0.3} for i in range(100)]

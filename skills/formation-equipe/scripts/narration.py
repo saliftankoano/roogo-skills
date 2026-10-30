@@ -7,8 +7,9 @@ Usage:
   narration.py --words-only audio/narration.wav --words audio/words.json
 
 The script is Markdown: a "# Title" line, then numbered paragraphs ("1. ...").
-The voice reads the paragraphs with the respellings in RESPELL applied; the
-captions later come from the unchanged script. Word timestamps come from fal
+The voice reads the paragraphs with the respellings in RESPELL, plus any
+--respell given for this video, applied; the captions later come from the
+unchanged script. Word timestamps come from fal
 (ElevenLabs Scribe v2) on the final audio, pauses included, saved as
 [{"w", "s", "e"}]; the pace (words a minute, pauses) is printed after.
 
@@ -60,16 +61,16 @@ def paragraphs(script_text):
     return [re.sub(r"^\d+b?\.\s*", "", l).strip() for l in body]
 
 
-def for_voice(text):
-    for word, spoken in RESPELL.items():
+def for_voice(text, extra=None):
+    for word, spoken in {**RESPELL, **(extra or {})}.items():
         text = re.sub(rf"\b{re.escape(word)}\b", spoken, text)
     return text
 
 
-def transcript(paras, pause=PAUSE):
+def transcript(paras, pause=PAUSE, extra=None):
     """Paragraphs as the voice reads them, with a break between paragraphs."""
     gap = f' <break time="{pause:g}s"/> ' if pause and pause > 0 else " "
-    return gap.join(for_voice(p) for p in paras)
+    return gap.join(for_voice(p, extra) for p in paras)
 
 
 def request_body(text, voice, speed=1.0):
@@ -144,17 +145,22 @@ def main():
     ap.add_argument("--test", help="read only this text, to check a voice or a spelling by ear")
     ap.add_argument("--words", help="where to write word timestamps (default: next to --out)")
     ap.add_argument("--words-only", help="skip the voice; timestamp this existing audio file")
+    ap.add_argument("--respell", action="append", default=[], metavar="WORD=SPOKEN",
+                    help="extra respelling for this video only, e.g. \"CNIB=C N I B\"; repeatable")
     a = ap.parse_args()
+    if any("=" not in r for r in a.respell):
+        ap.error("--respell takes WORD=SPOKEN")
+    extra = dict(r.split("=", 1) for r in a.respell)
     if a.speed is None:
         a.speed = CLONE_SPEED if (a.clone or a.voice in CLONES) else 1.0
     if a.words_only:
         return words(a.words_only, a.words or str(Path(a.words_only).with_suffix(".words.json")))
     if a.test:
-        return speak(for_voice(a.test), a.voice, a.out, a.speed)
+        return speak(for_voice(a.test, extra), a.voice, a.out, a.speed)
     if not a.script:
         ap.error("give the script file, --test or --words-only")
     print(f"speed {a.speed:g}, pause {a.pause:g} s between paragraphs")
-    speak(transcript(paragraphs(Path(a.script).read_text(encoding="utf-8")), a.pause), a.voice, a.out, a.speed)
+    speak(transcript(paragraphs(Path(a.script).read_text(encoding="utf-8")), a.pause, extra), a.voice, a.out, a.speed)
     words(a.out, a.words or str(Path(a.out).with_suffix(".words.json")))
 
 

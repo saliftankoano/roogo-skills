@@ -105,6 +105,14 @@ short.
 ## Requirements
 
 Node with Playwright (capture), Python 3 with Pillow, numpy, soundfile and
-noisereduce, ffmpeg and ffprobe. A Cartesia key in `CARTESIA_API_KEY` or the
+noisereduce, ffmpeg and ffprobe. The system Python usually lacks noisereduce;
+use a virtual environment in the working folder:
+`python3 -m venv .venv && .venv/bin/pip install noisereduce soundfile numpy Pillow`,
+then run the scripts with `.venv/bin/python`. A Cartesia key in `CARTESIA_API_KEY` or the
 macOS Keychain item `ai.cartesia.api-key` (account `default` or none); a fal key in `FAL_KEY` or the
 Keychain item `roogo-content-key` for word timestamps. Never print keys.
+
+Run the current skill: if an installed copy is used, compare it with this
+repository first (`diff -rq <installed> skills/formation-equipe`) and ask the
+user to update it when they differ. An outdated copy brings back bugs that are
+already fixed here.

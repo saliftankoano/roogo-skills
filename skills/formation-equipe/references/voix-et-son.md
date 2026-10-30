@@ -16,6 +16,9 @@ Write the script for reading, then respell only in the text sent to the voice:
 
 - "Roogo" → "Rohgo"; "Burkina Faso" → "Bourkina Faso".
 - Prices and numbers in words when the voice stumbles on digits.
+- Respellings for one video only go on the command line, so the script stays
+  as captioned: `narration.py script.md --respell "CNIB=C N I B"` (repeatable).
+  Never keep a second copy of the script for the voice.
 - Words a staff member must find on screen stay spelled as on screen in the
   captions; captions come from the approved script, never from the
   transcription.
