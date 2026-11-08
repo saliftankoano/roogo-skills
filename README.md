@@ -62,6 +62,10 @@ animate is `milestone`; a live listing with only photos is `visite-pov`; a sales
 
 ## Working habits
 
+- [Logbook — human guide](skills/logbook/README.md) — the agent keeps each
+  project's decisions, system notes, changelog, vocabulary and roadmap current
+  in five `docs/` files, recording only what was decided, explained, shipped or
+  committed to.
 - [Nettoyage — human guide](skills/nettoyage/README.md) — the agent cleans up
   after itself: final output and what is needed for later changes go into one
   Downloads folder per conversation, everything else goes to the Trash.
