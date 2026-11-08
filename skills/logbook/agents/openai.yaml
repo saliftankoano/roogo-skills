@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logbook"
+  short_description: "Keep decisions, system notes, changelog and roadmap current"
+  default_prompt: "Use $logbook to record what we just decided, built or shipped in docs/DECISIONS.md, SYSTEM.md, CHANGELOG.md, DOMAIN.md and ROADMAP.md."

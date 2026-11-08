@@ -4,6 +4,16 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Logbook lives in roogo-skills — 2026-11-08
+
+**Decision:** Publish the `logbook` skill in `skills/logbook/`, copied from Salif's own skill, with the Floreo version key removed, a human guide, agent metadata, and the template cross-links written as plain filenames so the package validator passes.
+
+**Why:** Every Roogo repository's agent instructions (`roogo`, `roogo-web`, this repo) tell agents to use `logbook`, but Roogo sessions could not load it: it lived only in a private plugin whose enabled names (`floreo-technical`, `floreo-non-technical`) do not match the plugin it defines (`floreo-skills`). Agents fell back to following the docs conventions by hand. Salif wrote the skill and asked for it here (2026-11-08).
+
+**Ruled out / alternatives:** Rewriting it from scratch (Salif chose the copy since he is the author). Enabling the whole Floreo plugin in Roogo sessions (loads every Floreo skill). Only linking it into the local workspace (works on one Mac, not for anyone installing roogo-skills).
+
+**Status:** Settled.
+
 ### Training videos meet the house rules by default — 2026-10-22
 
 **Decision:** `formation-equipe` editing now defaults to the house rules: the
