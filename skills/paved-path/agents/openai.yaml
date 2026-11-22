@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paved Path"
+  short_description: "Give every decision a sensible default"
+  default_prompt: "Use $paved-path to list every decision this app forces on the user and propose a default for each, starting with the first screen."

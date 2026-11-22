@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lazy Thumb"
+  short_description: "Cut the core action down to one easy step"
+  default_prompt: "Use $lazy-thumb to find the core action in this flow, count the steps it takes today, and propose the shortest version."

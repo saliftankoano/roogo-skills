@@ -224,3 +224,22 @@ rejected or shipped on different timelines.
 habit), or PRDs written from the request alone without reading the product.
 
 **Status:** Proposed in the `feat/good-prd` pull request.
+
+### Adapt the two attention-maximising retention principles — 2026-11-22
+
+**Decision:** The retention skills keep all six principles of the source
+framework by name, but `slot-machine` means real freshness (no gambling
+mechanics, fake scarcity or randomness around money) and `bottomless-pit`
+means no accidental dead ends plus honest endings (exits stay visible, a
+finished user may leave). Each of the seven packages carries an honest-line
+section, and each can be applied on a Claude Design canvas as well as to code.
+
+**Why:** Requested by the Roogo founder on 2026-11-22. The framework was built
+from entertainment feeds that maximise time spent; a housing marketplace
+serves an occasional, serious need, where a user who finds a home and leaves
+is the success case.
+
+**Ruled out / alternatives:** Copying the two principles as taught; dropping
+them and shipping four; one combined skill instead of one per principle.
+
+**Status:** Proposed in the `feat/retention-skills` pull request.

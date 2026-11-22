@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bottomless Pit"
+  short_description: "Remove dead ends, keep honest endings"
+  default_prompt: "Use $bottomless-pit to list every dead end in this app and give each one a relevant next step, keeping a clean ending when the job is done."

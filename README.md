@@ -70,6 +70,27 @@ animate is `milestone`; a live listing with only photos is `visite-pov`; a sales
   after itself: final output and what is needed for later changes go into one
   Downloads folder per conversation, everything else goes to the Trash.
 
+## Product retention
+
+Six principles for apps people come back to, one package each, plus an audit
+that runs all six. Each one can review an existing app or be applied while
+designing on a Claude Design canvas.
+
+- [The Itch — human guide](skills/the-itch/README.md) — tie the app to the
+  feeling that makes people open it; rewrite notifications to speak to it.
+- [Lazy Thumb — human guide](skills/lazy-thumb/README.md) — count the steps to
+  the core action and cut them toward one, within thumb reach.
+- [Paved Path — human guide](skills/paved-path/README.md) — a sensible default
+  for every decision, and the core action first on open.
+- [Slot Machine — human guide](skills/slot-machine/README.md) — keep the real
+  reward fresh between visits, with no gambling mechanics or fake scarcity.
+- [Bottomless Pit — human guide](skills/bottomless-pit/README.md) — a next step
+  for every dead end, and a clean ending when the job is done.
+- [Piggy Bank — human guide](skills/piggy-bank/README.md) — stored value that
+  makes each visit better than the last.
+- [Retention Audit — human guide](skills/retention-audit/README.md) — all six
+  in order, one scored report or one before/after design board.
+
 ## Quick start
 
 Copy the package directory you want, for example `skills/voxplainer`, into your

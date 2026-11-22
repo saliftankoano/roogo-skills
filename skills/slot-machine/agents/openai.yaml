@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slot Machine"
+  short_description: "Keep the real reward fresh, honestly"
+  default_prompt: "Use $slot-machine to name the real reward in this app and plan how it stays fresh between visits, with no fake urgency."

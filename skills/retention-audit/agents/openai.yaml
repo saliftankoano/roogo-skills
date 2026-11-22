@@ -1,0 +1,4 @@
+interface:
+  display_name: "Retention Audit"
+  short_description: "All six retention principles, one report"
+  default_prompt: "Use $retention-audit to audit this app against the six retention principles and give me a scorecard and the ranked changes."
