@@ -12,7 +12,7 @@
   rangement.py note "<texte>"                   add a line to LISEZMOI.md (how to resume, left on purpose)
 
 Every command but `ouvrir` acts on --dossier, else RANGEMENT_DOSSIER, else the
-folder opened last. Base folder: RANGEMENT_DIR, default ~/Downloads/Agent.
+folder opened last. Base folder: RANGEMENT_DIR, default ~/Desktop/Agent.
 """
 import argparse, datetime as dt, json, os, shutil, subprocess, sys, tempfile
 from pathlib import Path
@@ -21,7 +21,7 @@ TRACES = ".traces.jsonl"
 
 
 def base():
-    return Path(os.environ.get("RANGEMENT_DIR", Path.home() / "Downloads" / "Agent")).expanduser()
+    return Path(os.environ.get("RANGEMENT_DIR", Path.home() / "Desktop" / "Agent")).expanduser()
 
 
 def now():

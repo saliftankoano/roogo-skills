@@ -86,7 +86,7 @@ class RangementTests(unittest.TestCase):
 
     def test_skill_text_states_the_safety_rules(self):
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
-        for phrase in ("Only clean what **you** created", "Trash", "ask before removing", "~/Downloads/Agent/"):
+        for phrase in ("Only clean what **you** created", "Trash", "ask before removing", "~/Desktop/Agent/"):
             self.assertIn(phrase, skill)
 
 
