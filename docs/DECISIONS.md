@@ -4,6 +4,16 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Educational shorts skill points at the vault, not a copy — 2026-11-26
+
+**Decision:** Publish `shorts-educatifs` in `skills/shorts-educatifs/` as a short workflow that reads the series bible, `series.json`, the episode checklist and the hashtag rules from Roogo's private knowledge vault, and drives a `studio.py` toolkit that lives beside them. The skill carries no keys, scripts or series assets.
+
+**Why:** All video making moves into HyperFrames, and its agents only see skills placed in their project's `.claude/skills/`. One skill that names the vault files keeps the series rules in a single place, so a rule Salif changes in the vault reaches every agent without editing the skill. Keys stay in the macOS keychain.
+
+**Ruled out / alternatives:** Copying the bible, style blocks and scripts into the skill (they would drift from the vault and expose private business notes in a public repository). Embedding `studio.py` in the skill (it depends on private paths and the series folder layout).
+
+**Status:** Settled for now. Reopen if someone outside Salif's Mac needs to run the series: the toolkit would then have to become self-contained.
+
 ### Logbook lives in roogo-skills — 2026-11-08
 
 **Decision:** Publish the `logbook` skill in `skills/logbook/`, copied from Salif's own skill, with the Floreo version key removed, a human guide, agent metadata, and the template cross-links written as plain filenames so the package validator passes.
