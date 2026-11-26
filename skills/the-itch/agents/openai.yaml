@@ -1,0 +1,4 @@
+interface:
+  display_name: "The Itch"
+  short_description: "Tie the app to the feeling that opens it"
+  default_prompt: "Use $the-itch to run the itch on this app: name the feeling it answers, when users feel it, and rewrite the notifications to speak to it."

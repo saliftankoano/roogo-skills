@@ -1,0 +1,4 @@
+interface:
+  display_name: "Piggy Bank"
+  short_description: "Make the app worth more with each use"
+  default_prompt: "Use $piggy-bank to work out what a user would lose by uninstalling this app today, and what they could build up instead."

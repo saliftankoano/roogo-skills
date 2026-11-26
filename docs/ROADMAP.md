@@ -7,6 +7,10 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
 
 ## Now
 
+- [ ] **Publish the retention skills** — add `the-itch`, `lazy-thumb`, `paved-path`, `slot-machine`, `bottomless-pit`, `piggy-bank` and `retention-audit`: six retention principles and one audit, usable on code or on a Claude Design canvas.
+  - Done when: package validation and tests pass and the packages are merged to `main`; then the local installs are refreshed from `main` and the audit is run once on a real app to check the report and the canvas board.
+  - Delivery branch: `feat/retention-skills`. [Decision](DECISIONS.md#adapt-the-two-attention-maximising-retention-principles--2026-11-22).
+
 - [ ] **Apply the October 2026 training-video lessons to `formation-equipe`** — Keychain lookup fix, narration pace and pauses, voice cleaning that survives silent pauses, plan-driven vertical or landscape editing with centred captions and the badge, quote-aware captions, and phone capture of public pages with a list of test data created.
   - Done when: package validation and tests pass and the PR is merged to `main`; then the installed copy is refreshed from `main` and the next delivery is checked against the PRD metrics (pace 130 to 160 words a minute, no editing wrapper, no unreported test uploads).
   - Delivery branch: `feat/formation-equipe-improvements`. Spec: [PRDs 1 to 6](prd/formation-equipe-improvements-2026-10.md). [Decision](DECISIONS.md#training-videos-meet-the-house-rules-by-default--2026-10-22). PRD 7 (a « Carrières » entry in the roogo-web phone menu) belongs to roogo-web, not this repository.
