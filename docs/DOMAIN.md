@@ -200,6 +200,16 @@ instead of from crumbs scattered across scratch, repositories and Downloads.
 
 **Evidence:** [Cleanup skill](../skills/nettoyage/SKILL.md).
 
+### Rasmané series / episode lane
+
+**Meaning:** Roogo's educational comedy shorts: 9:16 paper-cut videos of 40 to 68 seconds where the hero Rasmané meets a housing or land situation, a narrator tells it, and it ends on one lesson and a WhatsApp call to action. Each episode belongs to a lane (buyers, owners, renters, démarcheurs), also called a series.
+
+**Origin:** Coined for Roogo by Salif, 2026-11-24 to 2026-11-26.
+
+**Why it matters for building:** Scripts are written voice first and need Salif's approval; episodes never state a fee or promise a result; every episode follows the series bible, so the skill must read it before writing.
+
+**Evidence:** `skills/shorts-educatifs/SKILL.md`.
+
 ### Improvement candidate
 
 **Meaning:** A proposed change to a skill, reported at the end of a run, that
