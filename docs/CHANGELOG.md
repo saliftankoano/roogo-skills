@@ -5,6 +5,10 @@ the application's release history. See [DECISIONS.md](DECISIONS.md) for why,
 [SYSTEM.md](SYSTEM.md) for how, [DOMAIN.md](DOMAIN.md) for terms, and
 [ROADMAP.md](ROADMAP.md) for unfinished work.
 
+## 2026-11-26
+
+- Published `shorts-educatifs`, the Rasmané educational shorts skill: sourced facts, a voice-first script the owner approves, paper-cut images, voices, edit, loudness check and social captions, reading the series rules from the Roogo vault, with a human guide and improvement candidates at the end of every run — verified merged in [PR #16](https://github.com/saliftankoano/roogo-skills/pull/16).
+
 ## 2026-10-14
 
 - Published `formation-equipe`, the staff training video skill: production captures from a signed-in browser over CDP, Cartesia narration with word timestamps, cloned-voice noise reduction, camera moves with script-spelled captions, a ducked credited music bed and still-frame, loudness and length checks; every run ends with improvement candidates tied to a gap and evidence — verified merged in [PR #8](https://github.com/saliftankoano/roogo-skills/pull/8).
