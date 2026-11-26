@@ -4,6 +4,16 @@ Why we made non-obvious choices. See [SYSTEM.md](SYSTEM.md) for mechanisms,
 [DOMAIN.md](DOMAIN.md) for terminology, [CHANGELOG.md](CHANGELOG.md) for shipped
 changes, and [ROADMAP.md](ROADMAP.md) for unfinished commitments.
 
+### Conversation folders move to the Desktop — 2026-11-26
+
+**Decision:** `nettoyage` keeps each conversation's folder under `~/Desktop/Agent/` by default, not `~/Downloads/Agent/`. `RANGEMENT_DIR` still overrides it.
+
+**Why:** Salif moved the existing folder to the Desktop on 2026-11-26 and asked that agents use it there. Left on the old default, the script would recreate a second `Agent` folder in Downloads.
+
+**Ruled out / alternatives:** A link from Downloads to the Desktop folder (keeps two names for one place). Setting `RANGEMENT_DIR` on each machine (easy to forget, and the skill text would still name Downloads).
+
+**Status:** Proposed in the `fix/nettoyage-desktop-agent` pull request. Supersedes the folder location in "Agents clean up after themselves into one folder per conversation" below; the rest of that decision stands.
+
 ### Logbook lives in roogo-skills — 2026-11-08
 
 **Decision:** Publish the `logbook` skill in `skills/logbook/`, copied from Salif's own skill, with the Floreo version key removed, a human guide, agent metadata, and the template cross-links written as plain filenames so the package validator passes.

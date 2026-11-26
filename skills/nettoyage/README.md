@@ -6,7 +6,7 @@ one tidy folder per conversation.
 
 ## What you get
 
-A folder in `~/Downloads/Agent/`, named after the work and dated, with:
+A folder in `~/Desktop/Agent/`, named after the work and dated, with:
 
 - `final/`: the final output, even if it was also delivered elsewhere.
 - `a-reprendre/`: what the agent would need to change it later (scripts,

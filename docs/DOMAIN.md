@@ -189,7 +189,7 @@ Guessing and rebuilding the whole video around the guess is the expensive failur
 ### Conversation folder
 
 **Meaning:** The one folder a conversation's work ends up in, by default
-`~/Downloads/Agent/<Sujet> <date>/`: `final/` holds a copy of the final output,
+`~/Desktop/Agent/<Sujet> <date>/`: `final/` holds a copy of the final output,
 `a-reprendre/` what is needed to change it later, `LISEZMOI.md` the index.
 Everything else the agent created is residue and goes to the Trash.
 

@@ -11,7 +11,7 @@ mechanisms, and [DOMAIN.md](DOMAIN.md) for terminology.
   - Done when: package validation and tests pass and the PR is merged to `main`; then the installed copy is refreshed from `main` and the next delivery is checked against the PRD metrics (pace 130 to 160 words a minute, no editing wrapper, no unreported test uploads).
   - Delivery branch: `feat/formation-equipe-improvements`. Spec: [PRDs 1 to 6](prd/formation-equipe-improvements-2026-10.md). [Decision](DECISIONS.md#training-videos-meet-the-house-rules-by-default--2026-10-22). PRD 7 (a « Carrières » entry in the roogo-web phone menu) belongs to roogo-web, not this repository.
 
-- [ ] **Publish the cleanup skill** — add `nettoyage`: trace, sort into one Downloads folder per conversation, Trash the rest.
+- [ ] **Publish the cleanup skill** — add `nettoyage`: trace, sort into one `~/Desktop/Agent/` folder per conversation, Trash the rest.
   - Done when: package validation and tests pass and the package is merged to `main`; then the local installs are refreshed from `main`.
   - Delivery branch: `feat/nettoyage`. [Decision](DECISIONS.md).
 

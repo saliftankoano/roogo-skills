@@ -4,7 +4,7 @@ description: >-
   Clean up after a piece of agent work so no residue is left: temporary files,
   test renders, caches, one-off installs, background servers and watchers,
   browser tabs, git worktrees and branches, test records. Each conversation gets
-  one folder in Downloads holding its final output and anything worth keeping
+  one folder on the Desktop holding its final output and anything worth keeping
   for later changes, with a short index. Use at the end of any task that
   created files or processes, when the user says "nettoie", "range",
   "clean up after yourself", "ne laisse pas de traces", or before reporting a
@@ -27,7 +27,7 @@ latest before cleaning:
 python3 scripts/rangement.py ouvrir "Vidéo formation Studio"
 ```
 
-Default location: `~/Downloads/Agent/<Sujet> <YYYY-MM-DD>/` (override with
+Default location: `~/Desktop/Agent/<Sujet> <YYYY-MM-DD>/` (override with
 `RANGEMENT_DIR`). Name it by subject, in the user's language, date at the end.
 Inside:
 

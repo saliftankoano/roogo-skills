@@ -68,7 +68,7 @@ animate is `milestone`; a live listing with only photos is `visite-pov`; a sales
   committed to.
 - [Nettoyage — human guide](skills/nettoyage/README.md) — the agent cleans up
   after itself: final output and what is needed for later changes go into one
-  Downloads folder per conversation, everything else goes to the Trash.
+  folder per conversation in `~/Desktop/Agent/`, everything else goes to the Trash.
 
 ## Quick start
 
